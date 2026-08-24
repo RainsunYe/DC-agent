@@ -1,0 +1,5 @@
+design_name,rtl_path,top_module,sdc_path
+simple_example,examples/simple/rtl,simple_top,examples/simple/constraints.sdc
+aes_cipher,examples/aes_cipher/rtl,aes_cipher_top,examples/aes_cipher/constraints.sdc
+sasc,examples/sasc/rtl,sasc_top,examples/sasc/constraints.sdc
+tv80,examples/tv80/rtl,tv80s,examples/tv80/constraints.sdc

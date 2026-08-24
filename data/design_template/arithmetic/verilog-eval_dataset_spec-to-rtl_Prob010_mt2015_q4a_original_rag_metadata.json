@@ -1,0 +1,382 @@
+{
+    "design_name": "verilog-eval_dataset_spec-to-rtl_Prob010_mt2015_q4a_original",
+    "area_optimization": {
+        "top_3_best": [
+            {
+                "strategy_id": "best_ppa_strategy",
+                "area_value": 0.13122,
+                "parameters": {
+                    "id": "best_ppa_strategy",
+                    "description": "High effort on timing and leakage; optimal for simple combinational logic. Enables retiming, clock gating, and leakage/dynamic optimization. Focuses on speed, minimal area, and power.",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_all",
+                        "compile_clock_gating_through_hierarchy": "true",
+                        "auto_ungroup_preserve_constraints": "false",
+                        "power_cg_ignore_setup_condition": "false",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "false",
+                        "compile_retime_exception_registers": "false"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization true",
+                        "set_leakage_optimization true",
+                        "set_clock_gating_style -minimum_bitwidth 3 -max_fanout 32 -num_stages 1",
+                        "set_dp_smartgen_options -booth_encoding false -adder_radix 2 -optimize_for speed",
+                        "set_critical_range 100 [current_design]",
+                        "set_optimize_registers true"
+                    ],
+                    "compile_ultra_options": [
+                        "-gate_clock",
+                        "-retime",
+                        "-no_autoungroup",
+                        "-no_boundary_optimization"
+                    ],
+                    "post_compile_commands": [
+                        "optimize_netlist -area"
+                    ]
+                }
+            },
+            {
+                "strategy_id": "random_strategy_01",
+                "area_value": 0.13122,
+                "parameters": {
+                    "id": "random_strategy_01",
+                    "description": "Random config 1",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "never",
+                        "compile_clock_gating_through_hierarchy": "false",
+                        "auto_ungroup_preserve_constraints": "true",
+                        "power_cg_ignore_setup_condition": "true",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "true",
+                        "compile_retime_exception_registers": "false"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization false",
+                        "set_leakage_optimization false",
+                        "set_clock_gating_style -minimum_bitwidth 1 -max_fanout 128 -num_stages 3",
+                        "set_dp_smartgen_options -booth_encoding auto -adder_radix auto -optimize_for area",
+                        "set_critical_range 50 [current_design]",
+                        "set_optimize_registers false"
+                    ],
+                    "compile_ultra_options": [
+                        "-exact_map",
+                        "-no_boundary_optimization",
+                        "-no_seq_output_inversion"
+                    ],
+                    "post_compile_commands": []
+                }
+            },
+            {
+                "strategy_id": "random_strategy_02",
+                "area_value": 0.13122,
+                "parameters": {
+                    "id": "random_strategy_02",
+                    "description": "Random config 2",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_all",
+                        "compile_clock_gating_through_hierarchy": "false",
+                        "auto_ungroup_preserve_constraints": "false",
+                        "power_cg_ignore_setup_condition": "false",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "false",
+                        "compile_retime_exception_registers": "true"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization true",
+                        "set_leakage_optimization true",
+                        "set_clock_gating_style -minimum_bitwidth 5 -max_fanout 32 -num_stages 2",
+                        "set_dp_smartgen_options -booth_encoding false -adder_radix 3 -optimize_for speed",
+                        "set_critical_range 200 [current_design]",
+                        "set_optimize_registers true"
+                    ],
+                    "compile_ultra_options": [
+                        "-gate_clock",
+                        "-retime"
+                    ],
+                    "post_compile_commands": [
+                        "optimize_netlist -area"
+                    ]
+                }
+            }
+        ],
+        "top_3_worst": [
+            {
+                "strategy_id": "random_strategy_19",
+                "area_value": 0.13122,
+                "parameters": {
+                    "id": "random_strategy_19",
+                    "description": "Random config 19",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_all",
+                        "compile_clock_gating_through_hierarchy": "true",
+                        "auto_ungroup_preserve_constraints": "true",
+                        "power_cg_ignore_setup_condition": "true",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "true",
+                        "compile_retime_exception_registers": "false"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization false",
+                        "set_leakage_optimization false",
+                        "set_clock_gating_style -minimum_bitwidth 1 -max_fanout 32 -num_stages 1",
+                        "set_dp_smartgen_options -booth_encoding false -adder_radix 2 -optimize_for default",
+                        "set_critical_range 50 [current_design]",
+                        "set_optimize_registers false"
+                    ],
+                    "compile_ultra_options": [
+                        "-no_seq_output_inversion",
+                        "-no_autoungroup"
+                    ],
+                    "post_compile_commands": []
+                }
+            },
+            {
+                "strategy_id": "random_strategy_18",
+                "area_value": 0.13122,
+                "parameters": {
+                    "id": "random_strategy_18",
+                    "description": "Random config 18",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_none",
+                        "compile_clock_gating_through_hierarchy": "false",
+                        "auto_ungroup_preserve_constraints": "false",
+                        "power_cg_ignore_setup_condition": "false",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "false",
+                        "compile_retime_exception_registers": "true"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization true",
+                        "set_leakage_optimization true",
+                        "set_clock_gating_style -minimum_bitwidth 3 -max_fanout 64 -num_stages 2",
+                        "set_dp_smartgen_options -booth_encoding true -adder_radix 4 -optimize_for area,speed",
+                        "set_critical_range 100 [current_design]",
+                        "set_optimize_registers true"
+                    ],
+                    "compile_ultra_options": [
+                        "-exact_map",
+                        "-gate_clock",
+                        "-retime"
+                    ],
+                    "post_compile_commands": [
+                        "optimize_netlist -area"
+                    ]
+                }
+            },
+            {
+                "strategy_id": "random_strategy_17",
+                "area_value": 0.13122,
+                "parameters": {
+                    "id": "random_strategy_17",
+                    "description": "Random config 17",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "never",
+                        "compile_clock_gating_through_hierarchy": "true",
+                        "auto_ungroup_preserve_constraints": "true",
+                        "power_cg_ignore_setup_condition": "true",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "true",
+                        "compile_retime_exception_registers": "false"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization false",
+                        "set_leakage_optimization false",
+                        "set_clock_gating_style -minimum_bitwidth 5 -max_fanout 128 -num_stages 3",
+                        "set_dp_smartgen_options -booth_encoding auto -adder_radix 3 -optimize_for speed",
+                        "set_critical_range 200 [current_design]",
+                        "set_optimize_registers false"
+                    ],
+                    "compile_ultra_options": [
+                        "-no_boundary_optimization",
+                        "-no_seq_output_inversion"
+                    ],
+                    "post_compile_commands": []
+                }
+            }
+        ]
+    },
+    "timing_optimization": {
+        "top_3_best": [
+            {
+                "strategy_id": "best_ppa_strategy",
+                "slack_value": 40.65,
+                "parameters": {
+                    "id": "best_ppa_strategy",
+                    "description": "High effort on timing and leakage; optimal for simple combinational logic. Enables retiming, clock gating, and leakage/dynamic optimization. Focuses on speed, minimal area, and power.",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_all",
+                        "compile_clock_gating_through_hierarchy": "true",
+                        "auto_ungroup_preserve_constraints": "false",
+                        "power_cg_ignore_setup_condition": "false",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "false",
+                        "compile_retime_exception_registers": "false"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization true",
+                        "set_leakage_optimization true",
+                        "set_clock_gating_style -minimum_bitwidth 3 -max_fanout 32 -num_stages 1",
+                        "set_dp_smartgen_options -booth_encoding false -adder_radix 2 -optimize_for speed",
+                        "set_critical_range 100 [current_design]",
+                        "set_optimize_registers true"
+                    ],
+                    "compile_ultra_options": [
+                        "-gate_clock",
+                        "-retime",
+                        "-no_autoungroup",
+                        "-no_boundary_optimization"
+                    ],
+                    "post_compile_commands": [
+                        "optimize_netlist -area"
+                    ]
+                }
+            },
+            {
+                "strategy_id": "random_strategy_02",
+                "slack_value": 40.65,
+                "parameters": {
+                    "id": "random_strategy_02",
+                    "description": "Random config 2",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_all",
+                        "compile_clock_gating_through_hierarchy": "false",
+                        "auto_ungroup_preserve_constraints": "false",
+                        "power_cg_ignore_setup_condition": "false",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "false",
+                        "compile_retime_exception_registers": "true"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization true",
+                        "set_leakage_optimization true",
+                        "set_clock_gating_style -minimum_bitwidth 5 -max_fanout 32 -num_stages 2",
+                        "set_dp_smartgen_options -booth_encoding false -adder_radix 3 -optimize_for speed",
+                        "set_critical_range 200 [current_design]",
+                        "set_optimize_registers true"
+                    ],
+                    "compile_ultra_options": [
+                        "-gate_clock",
+                        "-retime"
+                    ],
+                    "post_compile_commands": [
+                        "optimize_netlist -area"
+                    ]
+                }
+            },
+            {
+                "strategy_id": "random_strategy_04",
+                "slack_value": 40.65,
+                "parameters": {
+                    "id": "random_strategy_04",
+                    "description": "Random config 4",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_all",
+                        "compile_clock_gating_through_hierarchy": "false",
+                        "auto_ungroup_preserve_constraints": "false",
+                        "power_cg_ignore_setup_condition": "false",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "false",
+                        "compile_retime_exception_registers": "true"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization true",
+                        "set_leakage_optimization false",
+                        "set_clock_gating_style -minimum_bitwidth 3 -max_fanout 128 -num_stages 2",
+                        "set_dp_smartgen_options -booth_encoding auto -adder_radix 2 -optimize_for default",
+                        "set_critical_range 100 [current_design]",
+                        "set_optimize_registers true"
+                    ],
+                    "compile_ultra_options": [
+                        "-exact_map",
+                        "-gate_clock",
+                        "-retime"
+                    ],
+                    "post_compile_commands": [
+                        "optimize_netlist -area"
+                    ]
+                }
+            }
+        ],
+        "top_3_worst": [
+            {
+                "strategy_id": "random_strategy_19",
+                "slack_value": 36.45,
+                "parameters": {
+                    "id": "random_strategy_19",
+                    "description": "Random config 19",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_all",
+                        "compile_clock_gating_through_hierarchy": "true",
+                        "auto_ungroup_preserve_constraints": "true",
+                        "power_cg_ignore_setup_condition": "true",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "true",
+                        "compile_retime_exception_registers": "false"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization false",
+                        "set_leakage_optimization false",
+                        "set_clock_gating_style -minimum_bitwidth 1 -max_fanout 32 -num_stages 1",
+                        "set_dp_smartgen_options -booth_encoding false -adder_radix 2 -optimize_for default",
+                        "set_critical_range 50 [current_design]",
+                        "set_optimize_registers false"
+                    ],
+                    "compile_ultra_options": [
+                        "-no_seq_output_inversion",
+                        "-no_autoungroup"
+                    ],
+                    "post_compile_commands": []
+                }
+            },
+            {
+                "strategy_id": "random_strategy_17",
+                "slack_value": 36.45,
+                "parameters": {
+                    "id": "random_strategy_17",
+                    "description": "Random config 17",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "never",
+                        "compile_clock_gating_through_hierarchy": "true",
+                        "auto_ungroup_preserve_constraints": "true",
+                        "power_cg_ignore_setup_condition": "true",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "true",
+                        "compile_retime_exception_registers": "false"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization false",
+                        "set_leakage_optimization false",
+                        "set_clock_gating_style -minimum_bitwidth 5 -max_fanout 128 -num_stages 3",
+                        "set_dp_smartgen_options -booth_encoding auto -adder_radix 3 -optimize_for speed",
+                        "set_critical_range 200 [current_design]",
+                        "set_optimize_registers false"
+                    ],
+                    "compile_ultra_options": [
+                        "-no_boundary_optimization",
+                        "-no_seq_output_inversion"
+                    ],
+                    "post_compile_commands": []
+                }
+            },
+            {
+                "strategy_id": "random_strategy_15",
+                "slack_value": 36.45,
+                "parameters": {
+                    "id": "random_strategy_15",
+                    "description": "Random config 15",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_none",
+                        "compile_clock_gating_through_hierarchy": "true",
+                        "auto_ungroup_preserve_constraints": "true",
+                        "power_cg_ignore_setup_condition": "true",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "true",
+                        "compile_retime_exception_registers": "false"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization false",
+                        "set_leakage_optimization false",
+                        "set_clock_gating_style -minimum_bitwidth 3 -max_fanout 128 -num_stages 2",
+                        "set_dp_smartgen_options -booth_encoding auto -adder_radix auto -optimize_for default",
+                        "set_critical_range 100 [current_design]",
+                        "set_optimize_registers false"
+                    ],
+                    "compile_ultra_options": [
+                        "-exact_map",
+                        "-no_boundary_optimization"
+                    ],
+                    "post_compile_commands": []
+                }
+            }
+        ]
+    }
+}

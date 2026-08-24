@@ -1,0 +1,391 @@
+{
+    "design_name": "sample_partition_arithmetic_sampled_5_000_u_block_5_original",
+    "area_optimization": {
+        "top_3_best": [
+            {
+                "strategy_id": "random_strategy_03",
+                "area_value": 190.050298,
+                "parameters": {
+                    "id": "random_strategy_03",
+                    "description": "Randomized config #3",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_all",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "false",
+                        "compile_retime_exception_registers": "true",
+                        "auto_ungroup_preserve_constraints": "false",
+                        "compile_clock_gating_through_hierarchy": "true",
+                        "power_cg_balance_stages": "true",
+                        "power_cg_ignore_setup_condition": "true"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization true",
+                        "set_leakage_optimization false",
+                        "set_clock_gating_style -minimum_bitwidth 1 -max_fanout 64 -num_stages 2",
+                        "set_optimize_registers false",
+                        "set_dp_smartgen_options -all_options true -booth_encoding auto -booth_radix8 auto -booth_mux_based auto -booth_cell auto -mult_radix4 auto -mult_nand_based auto -inv_out_adder_cell auto -4to2_compressor_cell auto -adder_radix auto -ling_adder auto -hybrid_adder auto -carry_select_adder_cell auto -cond_sum_adder auto -sklansky_adder auto -brent_kung_adder auto -bounded_fanout_adder auto -mux_based auto -inv_adder_cell auto -sop2pos_transformation auto -tp_opt_tree auto -tp_oper_sel auto -smart_compare auto -optimize_for default",
+                        "set_critical_range 100 [current_design]"
+                    ],
+                    "compile_ultra_options": [
+                        "-exact_map",
+                        "-gate_clock",
+                        "-no_seq_output_inversion"
+                    ],
+                    "post_compile_commands": []
+                }
+            },
+            {
+                "strategy_id": "random_strategy_02",
+                "area_value": 230.641019,
+                "parameters": {
+                    "id": "random_strategy_02",
+                    "description": "Randomized config #2",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "never",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "true",
+                        "compile_retime_exception_registers": "false",
+                        "auto_ungroup_preserve_constraints": "true",
+                        "compile_clock_gating_through_hierarchy": "false",
+                        "power_cg_balance_stages": "false",
+                        "power_cg_ignore_setup_condition": "false"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization false",
+                        "set_leakage_optimization true",
+                        "set_clock_gating_style -minimum_bitwidth 5 -max_fanout 32 -num_stages 1",
+                        "set_optimize_registers true",
+                        "set_dp_smartgen_options -all_options false -booth_encoding auto -booth_radix8 true -booth_mux_based true -booth_cell auto -mult_radix4 auto -mult_nand_based true -inv_out_adder_cell true -4to2_compressor_cell auto -adder_radix 3 -ling_adder auto -hybrid_adder false -carry_select_adder_cell true -cond_sum_adder auto -sklansky_adder true -brent_kung_adder auto -bounded_fanout_adder auto -mux_based true -inv_adder_cell true -sop2pos_transformation true -tp_opt_tree true -tp_oper_sel true -smart_compare auto -optimize_for speed",
+                        "set_critical_range 200 [current_design]"
+                    ],
+                    "compile_ultra_options": [
+                        "-gate_clock",
+                        "-retime",
+                        "-no_boundary_optimization"
+                    ],
+                    "post_compile_commands": [
+                        "optimize_netlist -area"
+                    ]
+                }
+            },
+            {
+                "strategy_id": "random_strategy_07",
+                "area_value": 234.490139,
+                "parameters": {
+                    "id": "random_strategy_07",
+                    "description": "Randomized config #7",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_none",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "false",
+                        "compile_retime_exception_registers": "false",
+                        "auto_ungroup_preserve_constraints": "true",
+                        "compile_clock_gating_through_hierarchy": "true",
+                        "power_cg_balance_stages": "true",
+                        "power_cg_ignore_setup_condition": "true"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization true",
+                        "set_leakage_optimization true",
+                        "set_clock_gating_style -minimum_bitwidth 3 -max_fanout 64 -num_stages 3",
+                        "set_optimize_registers true",
+                        "set_dp_smartgen_options -all_options auto -booth_encoding auto -booth_radix8 auto -booth_mux_based auto -booth_cell auto -mult_radix4 auto -mult_nand_based auto -inv_out_adder_cell auto -4to2_compressor_cell auto -adder_radix auto -ling_adder auto -hybrid_adder auto -carry_select_adder_cell auto -cond_sum_adder auto -sklansky_adder auto -brent_kung_adder auto -bounded_fanout_adder auto -mux_based auto -inv_adder_cell auto -sop2pos_transformation auto -tp_opt_tree auto -tp_oper_sel auto -smart_compare auto -optimize_for area,speed",
+                        "set_critical_range 100 [current_design]"
+                    ],
+                    "compile_ultra_options": [
+                        "-gate_clock",
+                        "-retime",
+                        "-no_autoungroup"
+                    ],
+                    "post_compile_commands": [
+                        "optimize_netlist -area"
+                    ]
+                }
+            }
+        ],
+        "top_3_worst": [
+            {
+                "strategy_id": "random_strategy_16",
+                "area_value": 302.185079,
+                "parameters": {
+                    "id": "random_strategy_16",
+                    "description": "Randomized config #16",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_none",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "true",
+                        "compile_retime_exception_registers": "false",
+                        "auto_ungroup_preserve_constraints": "false",
+                        "compile_clock_gating_through_hierarchy": "false",
+                        "power_cg_balance_stages": "false",
+                        "power_cg_ignore_setup_condition": "true"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization false",
+                        "set_leakage_optimization true",
+                        "set_clock_gating_style -minimum_bitwidth 5 -max_fanout 128 -num_stages 3",
+                        "set_optimize_registers false",
+                        "set_dp_smartgen_options -all_options false -booth_encoding false -booth_radix8 false -booth_mux_based false -booth_cell false -mult_radix4 false -mult_nand_based false -inv_out_adder_cell false -4to2_compressor_cell false -adder_radix 2 -ling_adder false -hybrid_adder false -carry_select_adder_cell false -cond_sum_adder false -sklansky_adder false -brent_kung_adder false -bounded_fanout_adder false -mux_based false -inv_adder_cell false -sop2pos_transformation false -tp_opt_tree false -tp_oper_sel false -smart_compare false -optimize_for area",
+                        "set_critical_range 100 [current_design]"
+                    ],
+                    "compile_ultra_options": [
+                        "-exact_map",
+                        "-no_boundary_optimization"
+                    ],
+                    "post_compile_commands": []
+                }
+            },
+            {
+                "strategy_id": "random_strategy_12",
+                "area_value": 302.185079,
+                "parameters": {
+                    "id": "random_strategy_12",
+                    "description": "Randomized config #12",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_all",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "true",
+                        "compile_retime_exception_registers": "false",
+                        "auto_ungroup_preserve_constraints": "false",
+                        "compile_clock_gating_through_hierarchy": "false",
+                        "power_cg_balance_stages": "false",
+                        "power_cg_ignore_setup_condition": "true"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization false",
+                        "set_leakage_optimization true",
+                        "set_clock_gating_style -minimum_bitwidth 1 -max_fanout 128 -num_stages 2",
+                        "set_optimize_registers false",
+                        "set_dp_smartgen_options -all_options false -booth_encoding false -booth_radix8 false -booth_mux_based false -booth_cell false -mult_radix4 false -mult_nand_based false -inv_out_adder_cell false -4to2_compressor_cell false -adder_radix 2 -ling_adder false -hybrid_adder false -carry_select_adder_cell false -cond_sum_adder false -sklansky_adder false -brent_kung_adder false -bounded_fanout_adder false -mux_based false -inv_adder_cell false -sop2pos_transformation false -tp_opt_tree false -tp_oper_sel false -smart_compare false -optimize_for area",
+                        "set_critical_range 50 [current_design]"
+                    ],
+                    "compile_ultra_options": [
+                        "-exact_map",
+                        "-no_autoungroup"
+                    ],
+                    "post_compile_commands": []
+                }
+            },
+            {
+                "strategy_id": "random_strategy_10",
+                "area_value": 302.185079,
+                "parameters": {
+                    "id": "random_strategy_10",
+                    "description": "Randomized config #10",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_none",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "true",
+                        "compile_retime_exception_registers": "false",
+                        "auto_ungroup_preserve_constraints": "false",
+                        "compile_clock_gating_through_hierarchy": "false",
+                        "power_cg_balance_stages": "false",
+                        "power_cg_ignore_setup_condition": "true"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization false",
+                        "set_leakage_optimization true",
+                        "set_clock_gating_style -minimum_bitwidth 5 -max_fanout 128 -num_stages 3",
+                        "set_optimize_registers false",
+                        "set_dp_smartgen_options -all_options false -booth_encoding false -booth_radix8 false -booth_mux_based false -booth_cell false -mult_radix4 false -mult_nand_based false -inv_out_adder_cell false -4to2_compressor_cell false -adder_radix 2 -ling_adder false -hybrid_adder false -carry_select_adder_cell false -cond_sum_adder false -sklansky_adder false -brent_kung_adder false -bounded_fanout_adder false -mux_based false -inv_adder_cell false -sop2pos_transformation false -tp_opt_tree false -tp_oper_sel false -smart_compare false -optimize_for area",
+                        "set_critical_range 100 [current_design]"
+                    ],
+                    "compile_ultra_options": [
+                        "-exact_map",
+                        "-no_boundary_optimization"
+                    ],
+                    "post_compile_commands": []
+                }
+            }
+        ]
+    },
+    "timing_optimization": {
+        "top_3_best": [
+            {
+                "strategy_id": "random_strategy_18",
+                "slack_value": 1.63,
+                "parameters": {
+                    "id": "random_strategy_18",
+                    "description": "Randomized config #18",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_all",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "true",
+                        "compile_retime_exception_registers": "false",
+                        "auto_ungroup_preserve_constraints": "false",
+                        "compile_clock_gating_through_hierarchy": "false",
+                        "power_cg_balance_stages": "false",
+                        "power_cg_ignore_setup_condition": "true"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization false",
+                        "set_leakage_optimization true",
+                        "set_clock_gating_style -minimum_bitwidth 1 -max_fanout 128 -num_stages 2",
+                        "set_optimize_registers false",
+                        "set_dp_smartgen_options -all_options false -booth_encoding false -booth_radix8 false -booth_mux_based false -booth_cell false -mult_radix4 false -mult_nand_based false -inv_out_adder_cell false -4to2_compressor_cell false -adder_radix 2 -ling_adder false -hybrid_adder false -carry_select_adder_cell false -cond_sum_adder false -sklansky_adder false -brent_kung_adder false -bounded_fanout_adder false -mux_based false -inv_adder_cell false -sop2pos_transformation false -tp_opt_tree false -tp_oper_sel false -smart_compare false -optimize_for area",
+                        "set_critical_range 50 [current_design]"
+                    ],
+                    "compile_ultra_options": [
+                        "-exact_map",
+                        "-no_autoungroup"
+                    ],
+                    "post_compile_commands": [
+                        "optimize_netlist -area"
+                    ]
+                }
+            },
+            {
+                "strategy_id": "random_strategy_14",
+                "slack_value": 0.68,
+                "parameters": {
+                    "id": "random_strategy_14",
+                    "description": "Randomized config #14",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "never",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "true",
+                        "compile_retime_exception_registers": "false",
+                        "auto_ungroup_preserve_constraints": "false",
+                        "compile_clock_gating_through_hierarchy": "false",
+                        "power_cg_balance_stages": "false",
+                        "power_cg_ignore_setup_condition": "true"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization false",
+                        "set_leakage_optimization true",
+                        "set_clock_gating_style -minimum_bitwidth 5 -max_fanout 128 -num_stages 1",
+                        "set_optimize_registers false",
+                        "set_dp_smartgen_options -all_options false -booth_encoding false -booth_radix8 false -booth_mux_based false -booth_cell false -mult_radix4 false -mult_nand_based false -inv_out_adder_cell false -4to2_compressor_cell false -adder_radix 2 -ling_adder false -hybrid_adder false -carry_select_adder_cell false -cond_sum_adder false -sklansky_adder false -brent_kung_adder false -bounded_fanout_adder false -mux_based false -inv_adder_cell false -sop2pos_transformation false -tp_opt_tree false -tp_oper_sel false -smart_compare false -optimize_for area",
+                        "set_critical_range 200 [current_design]"
+                    ],
+                    "compile_ultra_options": [
+                        "-exact_map",
+                        "-no_boundary_optimization"
+                    ],
+                    "post_compile_commands": [
+                        "optimize_netlist -area"
+                    ]
+                }
+            },
+            {
+                "strategy_id": "random_strategy_10",
+                "slack_value": 0.27,
+                "parameters": {
+                    "id": "random_strategy_10",
+                    "description": "Randomized config #10",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_none",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "true",
+                        "compile_retime_exception_registers": "false",
+                        "auto_ungroup_preserve_constraints": "false",
+                        "compile_clock_gating_through_hierarchy": "false",
+                        "power_cg_balance_stages": "false",
+                        "power_cg_ignore_setup_condition": "true"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization false",
+                        "set_leakage_optimization true",
+                        "set_clock_gating_style -minimum_bitwidth 5 -max_fanout 128 -num_stages 3",
+                        "set_optimize_registers false",
+                        "set_dp_smartgen_options -all_options false -booth_encoding false -booth_radix8 false -booth_mux_based false -booth_cell false -mult_radix4 false -mult_nand_based false -inv_out_adder_cell false -4to2_compressor_cell false -adder_radix 2 -ling_adder false -hybrid_adder false -carry_select_adder_cell false -cond_sum_adder false -sklansky_adder false -brent_kung_adder false -bounded_fanout_adder false -mux_based false -inv_adder_cell false -sop2pos_transformation false -tp_opt_tree false -tp_oper_sel false -smart_compare false -optimize_for area",
+                        "set_critical_range 100 [current_design]"
+                    ],
+                    "compile_ultra_options": [
+                        "-exact_map",
+                        "-no_boundary_optimization"
+                    ],
+                    "post_compile_commands": []
+                }
+            }
+        ],
+        "top_3_worst": [
+            {
+                "strategy_id": "random_strategy_19",
+                "slack_value": 0.0,
+                "parameters": {
+                    "id": "random_strategy_19",
+                    "description": "Randomized config #19",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_none",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "false",
+                        "compile_retime_exception_registers": "true",
+                        "auto_ungroup_preserve_constraints": "true",
+                        "compile_clock_gating_through_hierarchy": "true",
+                        "power_cg_balance_stages": "true",
+                        "power_cg_ignore_setup_condition": "false"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization true",
+                        "set_leakage_optimization false",
+                        "set_clock_gating_style -minimum_bitwidth 3 -max_fanout 32 -num_stages 3",
+                        "set_optimize_registers true",
+                        "set_dp_smartgen_options -all_options auto -booth_encoding auto -booth_radix8 auto -booth_mux_based auto -booth_cell auto -mult_radix4 auto -mult_nand_based auto -inv_out_adder_cell auto -4to2_compressor_cell auto -adder_radix auto -ling_adder auto -hybrid_adder auto -carry_select_adder_cell auto -cond_sum_adder auto -sklansky_adder auto -brent_kung_adder auto -bounded_fanout_adder auto -mux_based auto -inv_adder_cell auto -sop2pos_transformation auto -tp_opt_tree auto -tp_oper_sel auto -smart_compare auto -optimize_for area,speed",
+                        "set_critical_range 100 [current_design]"
+                    ],
+                    "compile_ultra_options": [
+                        "-gate_clock",
+                        "-retime",
+                        "-no_autoungroup"
+                    ],
+                    "post_compile_commands": [
+                        "optimize_netlist -area"
+                    ]
+                }
+            },
+            {
+                "strategy_id": "random_strategy_17",
+                "slack_value": 0.0,
+                "parameters": {
+                    "id": "random_strategy_17",
+                    "description": "Randomized config #17",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "never",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "false",
+                        "compile_retime_exception_registers": "true",
+                        "auto_ungroup_preserve_constraints": "true",
+                        "compile_clock_gating_through_hierarchy": "true",
+                        "power_cg_balance_stages": "true",
+                        "power_cg_ignore_setup_condition": "false"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization true",
+                        "set_leakage_optimization false",
+                        "set_clock_gating_style -minimum_bitwidth 3 -max_fanout 64 -num_stages 1",
+                        "set_optimize_registers true",
+                        "set_dp_smartgen_options -all_options auto -booth_encoding auto -booth_radix8 auto -booth_mux_based auto -booth_cell auto -mult_radix4 auto -mult_nand_based auto -inv_out_adder_cell auto -4to2_compressor_cell auto -adder_radix auto -ling_adder auto -hybrid_adder auto -carry_select_adder_cell auto -cond_sum_adder auto -sklansky_adder auto -brent_kung_adder auto -bounded_fanout_adder auto -mux_based auto -inv_adder_cell auto -sop2pos_transformation auto -tp_opt_tree auto -tp_oper_sel auto -smart_compare auto -optimize_for area,speed",
+                        "set_critical_range 200 [current_design]"
+                    ],
+                    "compile_ultra_options": [
+                        "-gate_clock",
+                        "-retime",
+                        "-no_boundary_optimization"
+                    ],
+                    "post_compile_commands": []
+                }
+            },
+            {
+                "strategy_id": "random_strategy_15",
+                "slack_value": 0.0,
+                "parameters": {
+                    "id": "random_strategy_15",
+                    "description": "Randomized config #15",
+                    "app_vars": {
+                        "hdlin_infer_multibit": "default_all",
+                        "compile_optimize_unloaded_seq_logic_with_no_bound_opt": "false",
+                        "compile_retime_exception_registers": "true",
+                        "auto_ungroup_preserve_constraints": "true",
+                        "compile_clock_gating_through_hierarchy": "true",
+                        "power_cg_balance_stages": "true",
+                        "power_cg_ignore_setup_condition": "false"
+                    },
+                    "custom_commands": [
+                        "set_dynamic_optimization true",
+                        "set_leakage_optimization false",
+                        "set_clock_gating_style -minimum_bitwidth 1 -max_fanout 64 -num_stages 2",
+                        "set_optimize_registers true",
+                        "set_dp_smartgen_options -all_options true -booth_encoding true -booth_radix8 true -booth_mux_based true -booth_cell true -mult_radix4 true -mult_nand_based true -inv_out_adder_cell true -4to2_compressor_cell true -adder_radix 4 -ling_adder true -hybrid_adder true -carry_select_adder_cell true -cond_sum_adder true -sklansky_adder true -brent_kung_adder true -bounded_fanout_adder true -mux_based true -inv_adder_cell true -sop2pos_transformation true -tp_opt_tree true -tp_oper_sel true -smart_compare true -optimize_for area,speed",
+                        "set_critical_range 50 [current_design]"
+                    ],
+                    "compile_ultra_options": [
+                        "-gate_clock",
+                        "-retime",
+                        "-no_boundary_optimization"
+                    ],
+                    "post_compile_commands": []
+                }
+            }
+        ]
+    }
+}

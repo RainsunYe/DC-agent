@@ -1,0 +1,3426 @@
+[
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "The compile_ultra command optimizes the design to meet specified timing requirements."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "The compile_ultra command optimizes the design to achieve the smallest possible circuit while satisfying constraints."
+  },
+  {
+    "source": "Timing",
+    "source_type": "Metric",
+    "relation": "CONFLICTS_WITH",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "The optimization process trades off timing and area constraints during compilation."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Optimization",
+    "target_type": "Feature",
+    "description": "The compile_ultra command starts the synthesis and optimization processes."
+  },
+  {
+    "source": "Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Optimization is based on the design's speed requirements, corresponding to timing objectives."
+  },
+  {
+    "source": "Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Dynamic Power",
+    "target_type": "Metric",
+    "description": "Optimization is based on the design's power requirements."
+  },
+  {
+    "source": "Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Optimization considers area as one of the optimization constraints."
+  },
+  {
+    "source": "Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Architectural Optimization",
+    "target_type": "Feature",
+    "description": "Optimization includes Architectural Optimization as the first optimization level."
+  },
+  {
+    "source": "Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Logic-Level Optimization",
+    "target_type": "Feature",
+    "description": "Optimization includes Logic-Level Optimization as the second optimization level."
+  },
+  {
+    "source": "Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Gate-Level Optimization",
+    "target_type": "Feature",
+    "description": "Optimization includes Gate-Level Optimization as the third optimization level."
+  },
+  {
+    "source": "Architectural Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Logic-Level Optimization",
+    "target_type": "Feature",
+    "description": "Architectural Optimization is performed before Logic-Level Optimization in the optimization flow."
+  },
+  {
+    "source": "Logic-Level Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Gate-Level Optimization",
+    "target_type": "Feature",
+    "description": "Logic-Level Optimization precedes Gate-Level Optimization in the optimization flow."
+  },
+  {
+    "source": "Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Optimization aims to improve design delay performance under speed requirements."
+  },
+  {
+    "source": "Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Optimization explores implementations to achieve smaller area."
+  },
+  {
+    "source": "dc_shell",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Wire Load Mode",
+    "target_type": "Feature",
+    "description": "Invoking dc_shell runs Design Compiler in the default Wire Load Mode."
+  },
+  {
+    "source": "Wire Load Mode",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Wire Load Model",
+    "target_type": "Feature",
+    "description": "Wire Load Mode uses wire load models for delay estimation."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "DEPENDS_ON",
+    "target": "Wire Load Mode",
+    "target_type": "Feature",
+    "description": "The text states that compile_ultra can be run in Wire Load Mode."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "DISABLES",
+    "target": "Topographical Mode",
+    "target_type": "Feature",
+    "description": "In wire load mode, compile_ultra runs without topographical mode features."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Concurrent Optimization",
+    "target_type": "Feature",
+    "description": "The compile_ultra command provides concurrent optimization."
+  },
+  {
+    "source": "Concurrent Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Concurrent optimization in compile_ultra targets timing optimization."
+  },
+  {
+    "source": "Concurrent Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Concurrent optimization in compile_ultra targets area optimization."
+  },
+  {
+    "source": "Concurrent Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Dynamic Power",
+    "target_type": "Metric",
+    "description": "Concurrent optimization in compile_ultra targets power optimization."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Advanced Delay Optimization",
+    "target_type": "Feature",
+    "description": "The compile_ultra command provides advanced delay optimization."
+  },
+  {
+    "source": "Advanced Delay Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Advanced delay optimization improves timing."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Arithmetic Optimization",
+    "target_type": "Feature",
+    "description": "The compile_ultra command provides arithmetic optimization."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Advanced Timing Analysis",
+    "target_type": "Feature",
+    "description": "The compile_ultra command provides advanced timing analysis."
+  },
+  {
+    "source": "Advanced Timing Analysis",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Advanced timing analysis supports improved timing optimization."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Leakage Power Optimization",
+    "target_type": "Feature",
+    "description": "The compile_ultra command provides automatic leakage power optimization."
+  },
+  {
+    "source": "Leakage Power Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Leakage Power",
+    "target_type": "Metric",
+    "description": "Leakage power optimization improves leakage power."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Register Retiming",
+    "target_type": "Feature",
+    "description": "The compile_ultra command provides register retiming."
+  },
+  {
+    "source": "Register Retiming",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Register retiming improves timing."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "The compile_ultra command automatically performs ungrouping of logical hierarchies during optimization."
+  },
+  {
+    "source": "Automatic Ungrouping",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Automatic ungrouping improves timing by reducing logic levels after removing hierarchical boundaries."
+  },
+  {
+    "source": "Automatic Ungrouping",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Automatic ungrouping improves area by enabling logic sharing across former hierarchy boundaries."
+  },
+  {
+    "source": "Automatic Ungrouping",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Area-based Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "Automatic ungrouping includes area-based automatic ungrouping as one optimization mode."
+  },
+  {
+    "source": "Automatic Ungrouping",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Delay-based Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "Automatic ungrouping includes delay-based automatic ungrouping as another optimization mode."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Area-based Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "The compile_ultra command performs area-based automatic ungrouping before initial mapping."
+  },
+  {
+    "source": "Area-based Automatic Ungrouping",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Area-based automatic ungrouping improves area quality of results by removing small subdesigns early."
+  },
+  {
+    "source": "Area-based Automatic Ungrouping",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Area-based automatic ungrouping improves timing quality of results by optimizing with better context before mapping."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Delay-based Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "The compile_ultra command performs delay-based automatic ungrouping during delay optimization."
+  },
+  {
+    "source": "Delay-based Automatic Ungrouping",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Delay-based automatic ungrouping is used essentially for timing optimization along the critical path."
+  },
+  {
+    "source": "Delay-based Automatic Ungrouping",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Delay-based automatic ungrouping is driven by timing-critical paths during delay optimization."
+  },
+  {
+    "source": "Area-based Automatic Ungrouping",
+    "source_type": "Feature",
+    "relation": "ENABLES",
+    "target": "Datapath Extraction",
+    "target_type": "Feature",
+    "description": "Area-based automatic ungrouping allows datapath extraction to be enabled across ungrouped hierarchies."
+  },
+  {
+    "source": "Datapath Extraction",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Datapath extraction across ungrouped hierarchies improves timing quality of results."
+  },
+  {
+    "source": "Datapath Extraction",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Datapath extraction across ungrouped hierarchies improves area quality of results."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "The compile_ultra command applies timing-centric optimization for overall QoR improvements."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "DesignWare components",
+    "target_type": "Feature",
+    "description": "The compile_ultra command uses DesignWare components during synthesis."
+  },
+  {
+    "source": "DesignWare components",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "DesignWare component selection in compile_ultra chooses the best speed-optimized implementation to improve timing."
+  },
+  {
+    "source": "DesignWare components",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "DesignWare component selection in compile_ultra chooses the best area-optimized implementation to improve area."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Automatic Boundary Optimization",
+    "target_type": "Feature",
+    "description": "By default, compile_ultra optimizes across hierarchical boundaries, enabling automatic boundary optimization."
+  },
+  {
+    "source": "Automatic Boundary Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Automatic boundary optimization can improve hierarchical design quality by allowing modification across lower-level port interfaces."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Automatic Datapath Extraction and Optimization",
+    "target_type": "Feature",
+    "description": "compile_ultra includes automatic datapath extraction and optimization for arithmetic operators."
+  },
+  {
+    "source": "Automatic Datapath Extraction and Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Datapath Extraction",
+    "target_type": "Feature",
+    "description": "Automatic datapath extraction and optimization includes datapath extraction."
+  },
+  {
+    "source": "Automatic Datapath Extraction and Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Datapath Implementation",
+    "target_type": "Feature",
+    "description": "Automatic datapath extraction and optimization includes datapath implementation."
+  },
+  {
+    "source": "Datapath Extraction",
+    "source_type": "Feature",
+    "relation": "ENABLES",
+    "target": "Datapath Implementation",
+    "target_type": "Feature",
+    "description": "Datapath extraction transforms arithmetic operators into datapath blocks for subsequent datapath implementation."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-retime",
+    "target_type": "Parameter",
+    "description": "The compile_ultra command supports the -retime parameter."
+  },
+  {
+    "source": "-retime",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Adaptive Retiming",
+    "target_type": "Feature",
+    "description": "The -retime option enables adaptive retiming."
+  },
+  {
+    "source": "Adaptive Retiming",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Adaptive retiming moves registers and latches during optimization to improve timing."
+  },
+  {
+    "source": "optimize_registers",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Regular Retiming Engine",
+    "target_type": "Feature",
+    "description": "The optimize_registers command provides the regular retiming engine."
+  },
+  {
+    "source": "Adaptive Retiming",
+    "source_type": "Feature",
+    "relation": "CONFLICTS_WITH",
+    "target": "Regular Retiming Engine",
+    "target_type": "Feature",
+    "description": "Adaptive retiming does not replace the regular retiming engine available with optimize_registers."
+  },
+  {
+    "source": "Architectural Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Sharing common subexpressions",
+    "target_type": "Feature",
+    "description": "Architectural Optimization includes sharing common subexpressions as a high-level synthesis task."
+  },
+  {
+    "source": "Architectural Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Sharing resources",
+    "target_type": "Feature",
+    "description": "Architectural Optimization includes sharing resources as a high-level synthesis task."
+  },
+  {
+    "source": "Architectural Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Selecting DesignWare implementations",
+    "target_type": "Feature",
+    "description": "Architectural Optimization includes selecting DesignWare implementations as a high-level synthesis task."
+  },
+  {
+    "source": "Architectural Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Reordering operators",
+    "target_type": "Feature",
+    "description": "Architectural Optimization includes reordering operators as a high-level synthesis task."
+  },
+  {
+    "source": "Architectural Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Identifying arithmetic expressions for datapath synthesis",
+    "target_type": "Feature",
+    "description": "Architectural Optimization includes identifying arithmetic expressions for datapath synthesis."
+  },
+  {
+    "source": "Architectural Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "HDL coding style",
+    "target_type": "Feature",
+    "description": "Architectural Optimization is based on HDL coding style."
+  },
+  {
+    "source": "Logic-Level Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Structuring",
+    "target_type": "Feature",
+    "description": "Logic-Level Optimization includes the Structuring process."
+  },
+  {
+    "source": "Logic-Level Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Flattening",
+    "target_type": "Feature",
+    "description": "Logic-Level Optimization includes the Flattening process."
+  },
+  {
+    "source": "Structuring",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Structuring can reduce design area by adding intermediate variables and logic structure."
+  },
+  {
+    "source": "Structuring",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Structuring is constraint based and is best applied to noncritical timing paths."
+  },
+  {
+    "source": "Flattening",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Flattening is useful for speed optimization because it converts logic into a two-level combinational representation."
+  },
+  {
+    "source": "Gate-Level Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Mapping",
+    "target_type": "Feature",
+    "description": "Gate-Level Optimization includes the Mapping process."
+  },
+  {
+    "source": "Gate-Level Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Delay Optimization",
+    "target_type": "Feature",
+    "description": "Gate-Level Optimization includes the Delay Optimization process."
+  },
+  {
+    "source": "Gate-Level Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Design Rule Fixing",
+    "target_type": "Feature",
+    "description": "Gate-Level Optimization includes the Design Rule Fixing process."
+  },
+  {
+    "source": "Gate-Level Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Area Optimization",
+    "target_type": "Feature",
+    "description": "Gate-Level Optimization includes the Area Optimization process."
+  },
+  {
+    "source": "Mapping",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Mapping aims to generate a gate-level implementation that meets timing goals."
+  },
+  {
+    "source": "Mapping",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Mapping aims to generate a gate-level implementation that meets area goals."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "DEPENDS_ON",
+    "target": "Mapping",
+    "target_type": "Feature",
+    "description": "The compile_ultra command provides options to control the mapping algorithms."
+  },
+  {
+    "source": "Delay Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Mapping",
+    "target_type": "Feature",
+    "description": "Delay Optimization fixes delay violations introduced in the Mapping phase."
+  },
+  {
+    "source": "Delay Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Delay Optimization aims to fix delay violations and improve timing results."
+  },
+  {
+    "source": "Design Rule Fixing",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Design Rule Fixing tries to correct design rule violations without affecting timing."
+  },
+  {
+    "source": "Design Rule Fixing",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Design Rule Fixing tries to correct design rule violations without affecting area."
+  },
+  {
+    "source": "Area Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Mapping",
+    "target_type": "Feature",
+    "description": "Area Optimization is performed after the Mapping phase is completed."
+  },
+  {
+    "source": "Area Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Delay Optimization",
+    "target_type": "Feature",
+    "description": "Area Optimization is performed after the Delay Optimization phase is completed."
+  },
+  {
+    "source": "Area Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Design Rule Fixing",
+    "target_type": "Feature",
+    "description": "Area Optimization is performed after the Design Rule Fixing phase is completed."
+  },
+  {
+    "source": "Area Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Area Optimization aims to meet area constraints after earlier optimization phases."
+  },
+  {
+    "source": "Optimization Phases",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Combinational Optimization",
+    "target_type": "Feature",
+    "description": "Optimization Phases includes the Combinational Optimization stage."
+  },
+  {
+    "source": "Optimization Phases",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Sequential Optimization",
+    "target_type": "Feature",
+    "description": "Optimization Phases includes the Sequential Optimization stage."
+  },
+  {
+    "source": "Optimization Phases",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Local Optimizations",
+    "target_type": "Feature",
+    "description": "Optimization Phases includes Local Optimizations."
+  },
+  {
+    "source": "Combinational Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Technology-Independent Optimization",
+    "target_type": "Feature",
+    "description": "Combinational Optimization includes Technology-Independent Optimization."
+  },
+  {
+    "source": "Combinational Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Mapping",
+    "target_type": "Feature",
+    "description": "Combinational Optimization includes the Mapping process."
+  },
+  {
+    "source": "Combinational Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Technology-Specific Optimization",
+    "target_type": "Feature",
+    "description": "Combinational Optimization includes Technology-Specific Optimization."
+  },
+  {
+    "source": "Technology-Independent Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Technology-Independent Optimization is guided by optimization constraints such as area."
+  },
+  {
+    "source": "Technology-Specific Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Technology-Specific Optimization is guided by delay-related optimization constraints corresponding to timing."
+  },
+  {
+    "source": "Combinational Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Combinational Optimization attempts to improve timing by reducing optimization cost under constraints."
+  },
+  {
+    "source": "Combinational Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Combinational Optimization attempts to improve area by accepting optimization moves that reduce optimization cost."
+  },
+  {
+    "source": "Sequential Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Initial Sequential Optimization",
+    "target_type": "Feature",
+    "description": "Sequential Optimization includes the Initial Sequential Optimization phase."
+  },
+  {
+    "source": "Sequential Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Final Sequential Optimization",
+    "target_type": "Feature",
+    "description": "Sequential Optimization includes the Final Sequential Optimization phase."
+  },
+  {
+    "source": "Initial Sequential Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Gate-Level Optimization",
+    "target_type": "Feature",
+    "description": "Initial Sequential Optimization takes place during the first phase of Gate-Level Optimization."
+  },
+  {
+    "source": "Final Sequential Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Final Sequential Optimization optimizes timing-critical sequential cells to improve Timing."
+  },
+  {
+    "source": "Final Sequential Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Final Sequential Optimization can reduce area by replacing sequential cells with more-optimal library cells and remapping sequential elements."
+  },
+  {
+    "source": "Final Sequential Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Final Sequential Optimization targets timing-critical sequential cells and relies on accurate delay evaluation to meet timing constraints."
+  },
+  {
+    "source": "Final Sequential Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Final Sequential Optimization evaluates replacement of sequential cells in order to meet area constraints."
+  },
+  {
+    "source": "Local Optimizations",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Local Optimizations make incremental design changes to adjust for timing."
+  },
+  {
+    "source": "Local Optimizations",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Local Optimizations make incremental design changes to adjust for area."
+  },
+  {
+    "source": "Register Retiming",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Register Retiming is described as a sequential optimization technique that optimizes area."
+  },
+  {
+    "source": "optimize_registers",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Register Retiming",
+    "target_type": "Feature",
+    "description": "The optimize_registers command performs register retiming on sequential cells."
+  },
+  {
+    "source": "Pipelined-Logic Retiming",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Register Retiming",
+    "target_type": "Feature",
+    "description": "Pipelined-Logic Retiming is a retiming strategy for performing register retiming in pipelined designs."
+  },
+  {
+    "source": "optimize_registers",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Pipelined-Logic Retiming",
+    "target_type": "Feature",
+    "description": "The optimize_registers command performs the retiming strategy referred to as Pipelined-Logic Retiming."
+  },
+  {
+    "source": "Adaptive Retiming",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "WNS",
+    "target_type": "Metric",
+    "description": "Adaptive Retiming performs local retiming moves to improve worst negative slack."
+  },
+  {
+    "source": "Adaptive Retiming",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Register Retiming",
+    "target_type": "Feature",
+    "description": "Adaptive Retiming is a retiming strategy based on register retiming."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Adaptive Retiming",
+    "target_type": "Feature",
+    "description": "Using compile_ultra with the -retime option enables adaptive retiming."
+  },
+  {
+    "source": "Area Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Area Optimization is performed without degrading timing delay cost."
+  },
+  {
+    "source": "optimize_netlist",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-area",
+    "target_type": "Parameter",
+    "description": "The optimize_netlist command supports the -area parameter for area optimization."
+  },
+  {
+    "source": "-area",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Area Optimization",
+    "target_type": "Feature",
+    "description": "The -area parameter enables area optimization in optimize_netlist."
+  },
+  {
+    "source": "optimize_netlist",
+    "source_type": "Command",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "The optimize_netlist -area command improves area."
+  },
+  {
+    "source": "optimize_netlist",
+    "source_type": "Command",
+    "relation": "DEPENDS_ON",
+    "target": "compile_ultra",
+    "target_type": "Feature",
+    "description": "To maximize area benefits, optimize_netlist -area is recommended after compile_ultra."
+  },
+  {
+    "source": "Area Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "The optimize_netlist -area flow improves area without degrading timing."
+  },
+  {
+    "source": "Area Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Leakage Power",
+    "target_type": "Metric",
+    "description": "The optimize_netlist -area flow improves area without degrading leakage."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-no_boundary_optimization",
+    "target_type": "Parameter",
+    "description": "The compile_ultra command supports the -no_boundary_optimization parameter."
+  },
+  {
+    "source": "-no_boundary_optimization",
+    "source_type": "Parameter",
+    "relation": "DISABLES",
+    "target": "Boundary Optimization",
+    "target_type": "Feature",
+    "description": "The -no_boundary_optimization option disables all types of boundary optimization for the entire design."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-no_autoungroup",
+    "target_type": "Parameter",
+    "description": "The compile_ultra command uses the -no_autoungroup parameter when boundary optimization is disabled."
+  },
+  {
+    "source": "-no_boundary_optimization",
+    "source_type": "Parameter",
+    "relation": "SETS_VARIABLE",
+    "target": "-no_autoungroup",
+    "target_type": "Variable",
+    "description": "Using -no_boundary_optimization automatically sets -no_autoungroup."
+  },
+  {
+    "source": "-no_autoungroup",
+    "source_type": "Parameter",
+    "relation": "DISABLES",
+    "target": "Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "The -no_autoungroup option disables automatic ungrouping for the entire design."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-exact_map",
+    "target_type": "Parameter",
+    "description": "The compile_ultra command supports the -exact_map parameter for exact register mapping."
+  },
+  {
+    "source": "-exact_map",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Exact Mapping",
+    "target_type": "Feature",
+    "description": "The -exact_map parameter enables exact mapping for register mapping."
+  },
+  {
+    "source": "-exact_map",
+    "source_type": "Parameter",
+    "relation": "DISABLES",
+    "target": "Combinational Logic Encapsulation",
+    "target_type": "Feature",
+    "description": "Using -exact_map prevents sequential mapping from encapsulating combinational logic outside SEQGEN into sequential cells."
+  },
+  {
+    "source": "Adaptive Retiming",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "compile_ultra",
+    "target_type": "Command",
+    "description": "Design Compiler performs adaptive retiming when compile_ultra is used with the -retime option."
+  },
+  {
+    "source": "Adaptive Retiming",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "-retime",
+    "target_type": "Parameter",
+    "description": "Adaptive retiming requires the -retime parameter."
+  },
+  {
+    "source": "compile_retime_exception_registers",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "Register Movement With Timing Exceptions",
+    "target_type": "Feature",
+    "description": "Setting compile_retime_exception_registers to true enables moving registers that share the same timing exceptions."
+  },
+  {
+    "source": "Register Movement With Timing Exceptions",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "compile_retime_exception_registers",
+    "target_type": "Variable",
+    "description": "Register movement with timing exceptions requires compile_retime_exception_registers to be enabled."
+  },
+  {
+    "source": "Register Movement With Timing Exceptions",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Common Timing Exceptions",
+    "target_type": "Feature",
+    "description": "The feature requires all moved registers to have the same timing exception settings."
+  },
+  {
+    "source": "Common Timing Exceptions",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "max_delay",
+    "target_type": "Feature",
+    "description": "Common timing exceptions include max_delay."
+  },
+  {
+    "source": "Common Timing Exceptions",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "min_delay",
+    "target_type": "Feature",
+    "description": "Common timing exceptions include min_delay."
+  },
+  {
+    "source": "Common Timing Exceptions",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "multicycle_path",
+    "target_type": "Feature",
+    "description": "Common timing exceptions include multicycle_path."
+  },
+  {
+    "source": "Common Timing Exceptions",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "false_path",
+    "target_type": "Feature",
+    "description": "Common timing exceptions include false_path."
+  },
+  {
+    "source": "Common Timing Exceptions",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "group_path",
+    "target_type": "Feature",
+    "description": "Common timing exceptions include group_path."
+  },
+  {
+    "source": "set_optimize_registers",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Pipelined-Logic Retiming",
+    "target_type": "Feature",
+    "description": "The set_optimize_registers command is used to apply pipelined-logic retiming on selected pipelined portions of a design."
+  },
+  {
+    "source": "Pipelined-Logic Retiming",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "set_optimize_registers",
+    "target_type": "Command",
+    "description": "Using pipelined-logic retiming in the combined flow requires set_optimize_registers on the pipelined portions before compile_ultra -retime."
+  },
+  {
+    "source": "Adaptive Retiming",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Pipelined-Logic Retiming",
+    "target_type": "Feature",
+    "description": "In the combined flow, adaptive retiming is used alongside pipelined-logic retiming, which is first applied to pipelined portions."
+  },
+  {
+    "source": "Pipelined-Logic Retiming",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Pipelined-logic retiming moves registers through combinational logic to optimize timing."
+  },
+  {
+    "source": "Pipelined-Logic Retiming",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Pipelined-logic retiming moves registers through combinational logic to optimize area."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Pipelined-Logic Retiming",
+    "target_type": "Feature",
+    "description": "When used after set_optimize_registers, compile_ultra enables pipelined-logic retiming during compilation."
+  },
+  {
+    "source": "Pipelined-Logic Retiming",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "compile_ultra",
+    "target_type": "Command",
+    "description": "Pipelined-logic retiming can be performed by using set_optimize_registers followed by compile_ultra."
+  },
+  {
+    "source": "Leakage Power Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Leakage Power Optimization is applied on paths that are not timing-critical to avoid affecting performance."
+  },
+  {
+    "source": "Leakage Power Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Multiple Threshold Voltages",
+    "target_type": "Feature",
+    "description": "Leakage Power Optimization relies on library cells characterized for multiple threshold voltages."
+  },
+  {
+    "source": "set_leakage_optimization",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Leakage Power Optimization",
+    "target_type": "Feature",
+    "description": "The set_leakage_optimization command enables leakage power optimization."
+  },
+  {
+    "source": "Dynamic Power Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Dynamic Power",
+    "target_type": "Metric",
+    "description": "Dynamic power optimization improves dynamic power by reducing dynamic power consumption."
+  },
+  {
+    "source": "Dynamic Power Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Switching Activity",
+    "target_type": "Feature",
+    "description": "Dynamic power optimization depends on switching activity information."
+  },
+  {
+    "source": "read_saif",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Switching Activity",
+    "target_type": "Feature",
+    "description": "The read_saif command enables switching activity annotation for power optimization."
+  },
+  {
+    "source": "Dynamic Power Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Multithreshold Voltage Libraries",
+    "target_type": "Feature",
+    "description": "Dynamic power optimization depends on the use of multithreshold voltage libraries."
+  },
+  {
+    "source": "set_dynamic_optimization",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Dynamic Power Optimization",
+    "target_type": "Feature",
+    "description": "The set_dynamic_optimization command enables dynamic power optimization."
+  },
+  {
+    "source": "Dynamic Power Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Dynamic power optimization preserves performance, indicating no degradation to timing."
+  },
+  {
+    "source": "Dynamic Power Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "Incremental dynamic power optimization can provide better QoR."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Sequential Output Inversion",
+    "target_type": "Feature",
+    "description": "The compile_ultra command enables sequential output inversion by default."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-no_seq_output_inversion",
+    "target_type": "Parameter",
+    "description": "The compile_ultra command supports the -no_seq_output_inversion parameter."
+  },
+  {
+    "source": "-no_seq_output_inversion",
+    "source_type": "Parameter",
+    "relation": "DISABLES",
+    "target": "Sequential Output Inversion",
+    "target_type": "Feature",
+    "description": "The -no_seq_output_inversion parameter disables sequential output inversion."
+  },
+  {
+    "source": "compile_optimize_unloaded_seq_logic_with_no_bound_opt",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "Unconnected Register Propagation Across Hierarchies",
+    "target_type": "Feature",
+    "description": "Setting compile_optimize_unloaded_seq_logic_with_no_bound_opt to true enables removal of unconnected registers across hierarchies."
+  },
+  {
+    "source": "compile_optimize_unloaded_seq_logic_with_no_bound_opt",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "Unconnected Logic Propagation Through Multibit Registers",
+    "target_type": "Feature",
+    "description": "Setting compile_optimize_unloaded_seq_logic_with_no_bound_opt to true enables propagation of unconnected logic through multibit registers."
+  },
+  {
+    "source": "Unconnected Logic Propagation Through Multibit Registers",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Propagation of unconnected logic through multibit registers reduces unused bits and enables smaller multibit cells, improving area."
+  },
+  {
+    "source": "Unconnected Register Propagation Across Hierarchies",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Removing unconnected registers across hierarchies provides area reduction."
+  },
+  {
+    "source": "Unconnected Register Propagation Across Hierarchies",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Boundary Optimization Disabled",
+    "target_type": "Feature",
+    "description": "Unconnected register propagation across hierarchies applies when boundary optimization is disabled."
+  },
+  {
+    "source": "Unconnected Logic Propagation Through Multibit Registers",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Boundary Optimization Disabled",
+    "target_type": "Feature",
+    "description": "Propagation of unconnected logic through multibit registers applies when boundary optimization is disabled."
+  },
+  {
+    "source": "hdlin_infer_multibit",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "RTL bus inference",
+    "target_type": "Feature",
+    "description": "Setting hdlin_infer_multibit to default_all enables RTL bus inference for multibit register synthesis during RTL reading."
+  },
+  {
+    "source": "RTL bus inference",
+    "source_type": "Feature",
+    "relation": "ENABLES",
+    "target": "Multibit register synthesis",
+    "target_type": "Feature",
+    "description": "RTL bus inference enables the identification and grouping of bus register bits for multibit register synthesis."
+  },
+  {
+    "source": "RTL bus inference",
+    "source_type": "Feature",
+    "relation": "ENABLES",
+    "target": "Multibit components",
+    "target_type": "Feature",
+    "description": "RTL bus inference groups register bits belonging to each RTL bus into multibit components."
+  },
+  {
+    "source": "Multibit register synthesis",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "RTL bus inference",
+    "target_type": "Feature",
+    "description": "Multibit register synthesis relies on RTL bus inference to identify bus bits and form multibit candidates."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Multibit register synthesis",
+    "target_type": "Feature",
+    "description": "The compile_ultra command performs the actual replacement of register bits with multibit registers."
+  },
+  {
+    "source": "Multibit components",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "RTL bus inference",
+    "target_type": "Feature",
+    "description": "Formation of multibit components depends on RTL bus inference of bus-defined register bits."
+  },
+  {
+    "source": "auto_ungroup_preserve_constraints",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "Timing Constraint Preservation During Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "When auto_ungroup_preserve_constraints is true by default, Design Compiler preserves and reassigns timing constraints during automatic ungrouping."
+  },
+  {
+    "source": "auto_ungroup_preserve_constraints",
+    "source_type": "Variable",
+    "relation": "DISABLES",
+    "target": "Timing Constraint Preservation During Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "Setting auto_ungroup_preserve_constraints to false disables preservation and reassignment of timing constraints during automatic ungrouping."
+  },
+  {
+    "source": "Timing Constraint Preservation During Automatic Ungrouping",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "Timing constraint preservation in this context occurs as part of the automatic ungrouping process."
+  },
+  {
+    "source": "Timing Constraint Preservation During Automatic Ungrouping",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "This feature operates to preserve timing constraints when designs are automatically ungrouped."
+  },
+  {
+    "source": "Timing Constraint Preservation During Automatic Ungrouping",
+    "source_type": "Feature",
+    "relation": "DEGRADES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Preserving constraints can increase the number of size_only leaf cells, which can limit optimization scope and potentially hurt area optimization."
+  },
+  {
+    "source": "Timing Constraint Preservation During Automatic Ungrouping",
+    "source_type": "Feature",
+    "relation": "DEGRADES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "An increased number of size_only cells can limit optimization scope, potentially degrading timing optimization flexibility."
+  },
+  {
+    "source": "set_critical_range",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Critical Range Negative Slack Method",
+    "target_type": "Feature",
+    "description": "The set_critical_range command enables the critical range negative slack method for path group optimization."
+  },
+  {
+    "source": "Critical Range Negative Slack Method",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "The critical range negative slack method depends on timing delay and slack information to identify violators within the specified critical range."
+  },
+  {
+    "source": "Critical Range Negative Slack Method",
+    "source_type": "Feature",
+    "relation": "DEGRADES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Using the critical range negative slack method can increase runtime, indicating a potential tradeoff in timing optimization effort."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-gate_clock",
+    "target_type": "Parameter",
+    "description": "The compile_ultra command supports the -gate_clock parameter for compiling a design with clock gating."
+  },
+  {
+    "source": "-gate_clock",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Clock Gating",
+    "target_type": "Feature",
+    "description": "The -gate_clock parameter enables clock gating during compilation."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "DEPENDS_ON",
+    "target": "set_clock_gating_style",
+    "target_type": "Command",
+    "description": "During clock-gate insertion, compile_ultra uses the settings from set_clock_gating_style."
+  },
+  {
+    "source": "Clock Gating",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Clock gating honors setup, hold, and other timing-related constraints from the technology libraries during insertion."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "Sequential cell",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the Sequential cell parameter for clock-gating style configuration."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "Minimum bit-width",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the Minimum bit-width parameter for clock-gating style configuration."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "Setup constraint",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the Setup constraint parameter for clock-gating style configuration."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "Hold constraint",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the Hold constraint parameter for clock-gating style configuration."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "Positive edge logic",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the Positive edge logic parameter for clock-gating style configuration."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "Negative edge logic",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the Negative edge logic parameter for clock-gating style configuration."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "Control point",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the Control point parameter for clock-gating style configuration."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "Control signal",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the Control signal parameter for clock-gating style configuration."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "Observation point",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the Observation point parameter for clock-gating style configuration."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "Observation logic depth",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the Observation logic depth parameter for clock-gating style configuration."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "Maximum fanout",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the Maximum fanout parameter for clock-gating style configuration."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "Number of stages",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the Number of stages parameter for clock-gating style configuration."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "No sharing",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the No sharing parameter for clock-gating style configuration."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-minimum_bitwidth",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the -minimum_bitwidth parameter to specify the minimum register width required for clock gating."
+  },
+  {
+    "source": "-minimum_bitwidth",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Width condition",
+    "target_type": "Feature",
+    "description": "The -minimum_bitwidth parameter defines the width condition used to determine whether registers or register groups qualify for clock gating."
+  },
+  {
+    "source": "Clock gating",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "synchronous load-enable functionality",
+    "target_type": "Feature",
+    "description": "Clock gating is inserted only when the circuit demonstrates synchronous load-enable functionality."
+  },
+  {
+    "source": "Clock gating",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "setup condition",
+    "target_type": "Feature",
+    "description": "Clock gating requires the setup condition to be satisfied before a clock gate is inserted."
+  },
+  {
+    "source": "Clock gating",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Width condition",
+    "target_type": "Feature",
+    "description": "Clock gating requires the width condition to be satisfied for register banks or groups of register banks."
+  },
+  {
+    "source": "Width condition",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "synchronous load-enable functionality",
+    "target_type": "Feature",
+    "description": "The width condition is checked only after the register satisfies the enable-related condition represented by synchronous load-enable functionality."
+  },
+  {
+    "source": "Width condition",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "setup condition",
+    "target_type": "Feature",
+    "description": "The width condition is evaluated only if the setup condition is satisfied."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-max_fanout",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the -max_fanout parameter to limit the number of registers gated by one clock-gating element."
+  },
+  {
+    "source": "-max_fanout",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Clock-gating group",
+    "target_type": "Feature",
+    "description": "Using -max_fanout can cause multiple clock-gating elements with the same enable signal to form a clock-gating group."
+  },
+  {
+    "source": "-max_fanout",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Clock-gating subgroup",
+    "target_type": "Feature",
+    "description": "Using -max_fanout can partition registers gated by a single clock-gating element into a clock-gating subgroup."
+  },
+  {
+    "source": "-max_fanout",
+    "source_type": "Parameter",
+    "relation": "DEPENDS_ON",
+    "target": "Multibit Registers",
+    "target_type": "Feature",
+    "description": "The effective -max_fanout calculation depends on multibit registers being counted by required register count rather than bit count."
+  },
+  {
+    "source": "Multibit Mapping",
+    "source_type": "Feature",
+    "relation": "ENABLES",
+    "target": "Multibit Registers",
+    "target_type": "Feature",
+    "description": "The multibit mapping feature converts multiple single-bit registers into a multibit register."
+  },
+  {
+    "source": "Clock Gating",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Multibit Mapping",
+    "target_type": "Feature",
+    "description": "Clock-gating eligibility with minimum bitwidth can depend on multibit mapping when single-bit registers are converted into a multibit register."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-num_stages",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command provides the -num_stages parameter to specify the maximum number of stages for multistage clock gating."
+  },
+  {
+    "source": "-num_stages",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Multistage Clock Gating",
+    "target_type": "Feature",
+    "description": "The -num_stages parameter is used to define the stage limit required for multistage clock gating."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Multistage Clock Gating",
+    "target_type": "Feature",
+    "description": "The compile_ultra command performs multistage clock gating when used for clock-gating synthesis after stage configuration."
+  },
+  {
+    "source": "-gate_clock",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Multistage Clock Gating",
+    "target_type": "Feature",
+    "description": "The -gate_clock parameter enables compile_ultra to perform multistage clock gating."
+  },
+  {
+    "source": "Multistage Clock Gating",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Dynamic Power",
+    "target_type": "Metric",
+    "description": "Multistage clock gating provides additional power savings, improving dynamic power."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "INCLUDES",
+    "target": "Balancing Clock-Gating Stages",
+    "target_type": "Feature",
+    "description": "During multistage clock gating, compile_ultra includes balancing of clock-gating stages as an additional optimization step."
+  },
+  {
+    "source": "power_cg_balance_stages",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "Balancing Clock-Gating Stages",
+    "target_type": "Feature",
+    "description": "Setting power_cg_balance_stages to true enables balancing of existing clock-gating stages across register banks."
+  },
+  {
+    "source": "Balancing Clock-Gating Stages",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Balancing clock-gating stages ensures uniform clock latency across register banks, which improves timing consistency."
+  },
+  {
+    "source": "Multistage Clock Gating",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "-num_stages",
+    "target_type": "Parameter",
+    "description": "Multistage clock gating requires the maximum number of stages to be specified with -num_stages."
+  },
+  {
+    "source": "Multistage Clock Gating",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "-gate_clock",
+    "target_type": "Parameter",
+    "description": "Multistage clock gating is performed by using compile_ultra with the -gate_clock parameter."
+  },
+  {
+    "source": "Clock Gating",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Setup Condition",
+    "target_type": "Feature",
+    "description": "Performing clock gating requires the setup condition to be satisfied."
+  },
+  {
+    "source": "Latch-based Clock Gating",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Clock Gating",
+    "target_type": "Feature",
+    "description": "Latch-based clock gating is a form of clock gating."
+  },
+  {
+    "source": "Integrated Clock Gating",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Clock Gating",
+    "target_type": "Feature",
+    "description": "Integrated clock gating is a form of clock gating."
+  },
+  {
+    "source": "Latch-free Clock Gating",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Clock Gating",
+    "target_type": "Feature",
+    "description": "Latch-free clock gating is a form of clock gating."
+  },
+  {
+    "source": "Latch-free Clock Gating",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Setup Condition",
+    "target_type": "Feature",
+    "description": "Latch-free clock gating is not applied when the setup condition is false."
+  },
+  {
+    "source": "set_input_delay",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Setup Condition",
+    "target_type": "Feature",
+    "description": "Specifying a clock for a primary input port with set_input_delay makes the input synchronous with the clock and causes the setup condition to be true."
+  },
+  {
+    "source": "power_cg_ignore_setup_condition",
+    "source_type": "Variable",
+    "relation": "DISABLES",
+    "target": "Setup Condition",
+    "target_type": "Feature",
+    "description": "Setting power_cg_ignore_setup_condition to true causes Power Compiler to ignore the setup condition for latch-free clock gating."
+  },
+  {
+    "source": "power_cg_ignore_setup_condition",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "Latch-free Clock Gating",
+    "target_type": "Feature",
+    "description": "Setting power_cg_ignore_setup_condition to true allows latch-free clock gating even when the setup condition would otherwise be false."
+  },
+  {
+    "source": "DC Ultra",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "DesignWare datapath generator",
+    "target_type": "Feature",
+    "description": "DC Ultra includes the DesignWare datapath generator for datapath implementation."
+  },
+  {
+    "source": "DesignWare datapath generator",
+    "source_type": "Feature",
+    "relation": "ENABLES",
+    "target": "Datapath Implementation",
+    "target_type": "Feature",
+    "description": "The DesignWare datapath generator enables implementation of synthetic operators and extracted datapath elements."
+  },
+  {
+    "source": "DesignWare datapath generator",
+    "source_type": "Feature",
+    "relation": "ENABLES",
+    "target": "Smart Generation",
+    "target_type": "Feature",
+    "description": "The DesignWare datapath generator uses smart generation technology."
+  },
+  {
+    "source": "Smart Generation",
+    "source_type": "Feature",
+    "relation": "ENABLES",
+    "target": "Context-driven Optimizations",
+    "target_type": "Feature",
+    "description": "Smart generation enables datapath block implementation using context-driven optimizations."
+  },
+  {
+    "source": "Smart Generation",
+    "source_type": "Feature",
+    "relation": "ENABLES",
+    "target": "High-level Optimization Decision Revisit",
+    "target_type": "Feature",
+    "description": "Smart generation enables revisiting high-level optimization decisions for a given timing context."
+  },
+  {
+    "source": "Smart Generation",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Revisiting high-level optimization decisions is performed for a given timing context."
+  },
+  {
+    "source": "Smart Generation",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Logic Library Characteristics",
+    "target_type": "Feature",
+    "description": "Smart generation considers logic library characteristics during datapath generation."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Smart Generation",
+    "target_type": "Feature",
+    "description": "The set_dp_smartgen_options command provides control for smart generation strategies."
+  },
+  {
+    "source": "-exact_map",
+    "source_type": "Parameter",
+    "relation": "DISABLES",
+    "target": "Sequential Output Inversion",
+    "target_type": "Feature",
+    "description": "The -exact_map option disables sequential output inversion."
+  },
+  {
+    "source": "-no_boundary_optimization",
+    "source_type": "Parameter",
+    "relation": "SETS_VARIABLE",
+    "target": "compile_preserve_subdesign_interfaces",
+    "target_type": "Variable",
+    "description": "The -no_boundary_optimization option sets compile_preserve_subdesign_interfaces to true."
+  },
+  {
+    "source": "-retime",
+    "source_type": "Parameter",
+    "relation": "CONFLICTS_WITH",
+    "target": "-only_design_rule",
+    "target_type": "Parameter",
+    "description": "The -retime option is ignored when -only_design_rule is used at the same time."
+  },
+  {
+    "source": "-retime",
+    "source_type": "Parameter",
+    "relation": "CONFLICTS_WITH",
+    "target": "-top",
+    "target_type": "Parameter",
+    "description": "The -retime option is ignored when -top is used at the same time."
+  },
+  {
+    "source": "-gate_clock",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Clock Gating Optimization",
+    "target_type": "Feature",
+    "description": "The -gate_clock option enables clock gating optimization."
+  },
+  {
+    "source": "-gate_clock",
+    "source_type": "Parameter",
+    "relation": "CONFLICTS_WITH",
+    "target": "-only_design_rule",
+    "target_type": "Parameter",
+    "description": "The -gate_clock option cannot be used together with -only_design_rule."
+  },
+  {
+    "source": "-gate_clock",
+    "source_type": "Parameter",
+    "relation": "CONFLICTS_WITH",
+    "target": "-exact_map",
+    "target_type": "Parameter",
+    "description": "When used with -exact_map, clock gating optimization might make it impossible to honor exact mapping for affected registers."
+  },
+  {
+    "source": "compile_optimize_unloaded_seq_logic_with_no_bound_opt",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "Unused Sequential Logic Optimization",
+    "target_type": "Feature",
+    "description": "Setting compile_optimize_unloaded_seq_logic_with_no_bound_opt to true enables optimization away of unused sequential logic even when Boundary Optimization is disabled."
+  },
+  {
+    "source": "Unused Sequential Logic Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "compile_optimize_unloaded_seq_logic_with_no_bound_opt",
+    "target_type": "Variable",
+    "description": "Unused Sequential Logic Optimization depends on the compile_optimize_unloaded_seq_logic_with_no_bound_opt variable being set to true in the described case."
+  },
+  {
+    "source": "Unused Sequential Logic Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Unloaded Combinational Logic Removal",
+    "target_type": "Feature",
+    "description": "In attempting to remove unused sequential logic, the tool also removes unloaded combinational logic."
+  },
+  {
+    "source": "Unused Sequential Logic Optimization",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Unloaded Net Removal",
+    "target_type": "Feature",
+    "description": "In attempting to remove unused sequential logic, the tool also removes unloaded nets."
+  },
+  {
+    "source": "hdlin_infer_multibit",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "Multibit Component Inference",
+    "target_type": "Feature",
+    "description": "The hdlin_infer_multibit variable controls inference of multibit components for an entire design."
+  },
+  {
+    "source": "hdlin_infer_multibit",
+    "source_type": "Variable",
+    "relation": "DEPENDS_ON",
+    "target": "Multibit Component Inference",
+    "target_type": "Feature",
+    "description": "Whether multibit component inference is performed across the design depends on the hdlin_infer_multibit variable setting."
+  },
+  {
+    "source": "auto_ungroup_preserve_constraints",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "Timing Constraint Preservation",
+    "target_type": "Feature",
+    "description": "The auto_ungroup_preserve_constraints variable enables preserving timing constraints when hierarchies are ungrouped during optimization."
+  },
+  {
+    "source": "auto_ungroup_preserve_constraints",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "When true, the auto_ungroup_preserve_constraints variable enables ungrouping of hierarchies that have timing constraints."
+  },
+  {
+    "source": "Timing Constraint Preservation",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "auto_ungroup_preserve_constraints",
+    "target_type": "Variable",
+    "description": "Preservation of timing constraints during hierarchy ungrouping depends on the auto_ungroup_preserve_constraints variable."
+  },
+  {
+    "source": "compile",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-ungroup_all",
+    "target_type": "Parameter",
+    "description": "The compile command supports the -ungroup_all parameter."
+  },
+  {
+    "source": "compile",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-auto_ungroup",
+    "target_type": "Parameter",
+    "description": "The compile command supports the -auto_ungroup parameter."
+  },
+  {
+    "source": "compile",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "The compile command can ungroup hierarchies during optimization."
+  },
+  {
+    "source": "-ungroup_all",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "The -ungroup_all parameter enables hierarchy ungrouping."
+  },
+  {
+    "source": "-auto_ungroup",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "The -auto_ungroup parameter enables automatic hierarchy ungrouping."
+  },
+  {
+    "source": "Automatic Ungrouping",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "auto_ungroup_preserve_constraints",
+    "target_type": "Variable",
+    "description": "Ungrouping hierarchies with timing constraints depends on the auto_ungroup_preserve_constraints variable."
+  },
+  {
+    "source": "set_ungroup",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "The set_ungroup command enables hierarchy ungrouping behavior."
+  },
+  {
+    "source": "auto_ungroup_preserve_constraints",
+    "source_type": "Variable",
+    "relation": "DISABLES",
+    "target": "Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "When set to false before compiling, auto_ungroup_preserve_constraints disables ungrouping of hierarchies with timing constraints."
+  },
+  {
+    "source": "set_critical_range",
+    "source_type": "Command",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "The set_critical_range command affects optimization of critical and near-critical paths, improving timing-focused optimization."
+  },
+  {
+    "source": "set_critical_range",
+    "source_type": "Command",
+    "relation": "DEPENDS_ON",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "The set_critical_range command defines a delay margin used for optimization based on timing criticality."
+  },
+  {
+    "source": "critical range",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Critical range enables optimization to include near-critical paths, which supports improved timing results."
+  },
+  {
+    "source": "compile",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-gate_clock",
+    "target_type": "Parameter",
+    "description": "The compile command supports the -gate_clock parameter for clock gating."
+  },
+  {
+    "source": "compile_clock_gating_through_hierarchy",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "Clock Gating Through Hierarchy Boundaries",
+    "target_type": "Feature",
+    "description": "Setting compile_clock_gating_through_hierarchy to true enables clock gating across hierarchy boundaries."
+  },
+  {
+    "source": "-gate_clock",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Clock Gating Through Hierarchy Boundaries",
+    "target_type": "Feature",
+    "description": "With the controlling variable enabled, the -gate_clock parameter allows clock gating through hierarchy boundaries."
+  },
+  {
+    "source": "Clock Gating Through Hierarchy Boundaries",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "compile_clock_gating_through_hierarchy",
+    "target_type": "Variable",
+    "description": "Clock gating through hierarchy boundaries depends on the compile_clock_gating_through_hierarchy variable being set to true."
+  },
+  {
+    "source": "Clock Gating Through Hierarchy Boundaries",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Dynamic Power",
+    "target_type": "Metric",
+    "description": "Using one clock gate for registers in different hierarchical cells can reduce the number of clock gates and increase clock gating opportunities, improving dynamic power optimization."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Clock Gating",
+    "target_type": "Feature",
+    "description": "The set_clock_gating_style command sets the style used for clock-gate insertion and replacement, enabling configuration of clock gating."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Clock-Gate Insertion",
+    "target_type": "Feature",
+    "description": "The set_clock_gating_style command defines the style used for clock-gate insertion."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Clock-Gate Replacement",
+    "target_type": "Feature",
+    "description": "The set_clock_gating_style command defines the style used for clock-gate replacement."
+  },
+  {
+    "source": "-gate_clock",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Power-Driven Clock Gating",
+    "target_type": "Feature",
+    "description": "The -gate_clock parameter enables power-driven clock gating."
+  },
+  {
+    "source": "-gate_clock",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Gate-Level Clock Gating",
+    "target_type": "Feature",
+    "description": "The -gate_clock parameter enables gate-level clock gating."
+  },
+  {
+    "source": "replace_clock_gates",
+    "source_type": "Command",
+    "relation": "DEPENDS_ON",
+    "target": "Clock Gating",
+    "target_type": "Feature",
+    "description": "The replace_clock_gates command uses the clock-gating style defined for clock gating."
+  },
+  {
+    "source": "Clock Gating",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Dynamic Power",
+    "target_type": "Metric",
+    "description": "Clock gating reduces power consumption on the clock tree, registers, and combinational logic, improving dynamic power."
+  },
+  {
+    "source": "Clock Gating",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Testability",
+    "target_type": "Feature",
+    "description": "Clock gating has implications on testability and therefore depends on testability considerations."
+  },
+  {
+    "source": "Clock Gating",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Physical Design",
+    "target_type": "Feature",
+    "description": "Clock gating has implications on physical design and therefore depends on physical design considerations."
+  },
+  {
+    "source": "Clock Gating",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Multistage Clock Gating",
+    "target_type": "Feature",
+    "description": "Clock gating includes multistage clock gating as a style aspect controlled by the number of stages."
+  },
+  {
+    "source": "-minimum_bitwidth",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Clock Gating",
+    "target_type": "Feature",
+    "description": "The -minimum_bitwidth parameter qualifies register banks for clock gating when their bit width meets or exceeds the specified value."
+  },
+  {
+    "source": "Clock Gating",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Load Enable Flip-Flop",
+    "target_type": "Feature",
+    "description": "Latch-based clock gating requires the register to be implemented as a load enable flip-flop."
+  },
+  {
+    "source": "Clock Gating",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Dynamic Power",
+    "target_type": "Metric",
+    "description": "For power-driven clock gating, the optimization decision depends on the dynamic power of the register bank."
+  },
+  {
+    "source": "-max_fanout",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Clock Gating",
+    "target_type": "Feature",
+    "description": "The -max_fanout option specifies the maximum fanout of clock-gating cells at the RTL level for clock-gated register banks."
+  },
+  {
+    "source": "-max_fanout",
+    "source_type": "Parameter",
+    "relation": "DEPENDS_ON",
+    "target": "minimum_bitwidth",
+    "target_type": "Parameter",
+    "description": "The value of -max_fanout should not be less than the minimum_bitwidth value."
+  },
+  {
+    "source": "-num_stages",
+    "source_type": "Parameter",
+    "relation": "DEPENDS_ON",
+    "target": "-gate_clock",
+    "target_type": "Parameter",
+    "description": "The -num_stages option enables multistage clock gating with compile_ultra -gate_clock."
+  },
+  {
+    "source": "Multistage Clock Gating",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Clock Gating",
+    "target_type": "Feature",
+    "description": "Multistage clock gating is a specialized form of clock gating."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "DEPENDS_ON",
+    "target": "Clock-gating Style",
+    "target_type": "Feature",
+    "description": "Clock gating during compile_ultra depends on a clock-gating style, either explicitly set or defaulted."
+  },
+  {
+    "source": "replace_clock_gates",
+    "source_type": "Command",
+    "relation": "DEPENDS_ON",
+    "target": "Clock-gating Style",
+    "target_type": "Feature",
+    "description": "The replace_clock_gates command depends on a clock-gating style, either explicitly set or defaulted."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Clock-gating Style",
+    "target_type": "Feature",
+    "description": "The set_clock_gating_style command explicitly sets the clock-gating style."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-instances",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the -instances parameter to specify hierarchical cells for applying a clock gating style."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-power_domains",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the -power_domains parameter to specify power domains for applying a clock gating style."
+  },
+  {
+    "source": "set_clock_gating_style",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-designs",
+    "target_type": "Parameter",
+    "description": "The set_clock_gating_style command supports the -designs parameter to specify designs for applying a clock gating style."
+  },
+  {
+    "source": "power_cg_iscgs_enable",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "Instance specific Clock-gating Style",
+    "target_type": "Feature",
+    "description": "Setting power_cg_iscgs_enable to true enables instance specific clock-gating style."
+  },
+  {
+    "source": "-instances",
+    "source_type": "Parameter",
+    "relation": "DEPENDS_ON",
+    "target": "Instance specific Clock-gating Style",
+    "target_type": "Feature",
+    "description": "The -instances parameter can be used only when instance specific clock-gating style is enabled."
+  },
+  {
+    "source": "-power_domains",
+    "source_type": "Parameter",
+    "relation": "DEPENDS_ON",
+    "target": "Instance specific Clock-gating Style",
+    "target_type": "Feature",
+    "description": "The -power_domains parameter can be used only when instance specific clock-gating style is enabled."
+  },
+  {
+    "source": "-designs",
+    "source_type": "Parameter",
+    "relation": "DEPENDS_ON",
+    "target": "Instance specific Clock-gating Style",
+    "target_type": "Feature",
+    "description": "The -designs parameter can be used only when instance specific clock-gating style is enabled."
+  },
+  {
+    "source": "Instance specific Clock-gating Style",
+    "source_type": "Feature",
+    "relation": "DISABLES",
+    "target": "Automatic Ungrouping",
+    "target_type": "Feature",
+    "description": "Instances with a specific clock gating style set are not automatically ungrouped, so instance specific clock-gating style disables automatic ungrouping for those instances."
+  },
+  {
+    "source": "compile",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-incremental_mapping",
+    "target_type": "Parameter",
+    "description": "The compile command supports the -incremental_mapping parameter in the gate-clock balancing context."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-incremental_mapping",
+    "target_type": "Parameter",
+    "description": "The compile_ultra command supports the -incremental_mapping parameter in the gate-clock balancing context."
+  },
+  {
+    "source": "power_cg_balance_stages",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "Gate Stage Balancing",
+    "target_type": "Feature",
+    "description": "Setting power_cg_balance_stages to true enables gate stage balancing during compile -gate_clock or compile_ultra -gate_clock."
+  },
+  {
+    "source": "Gate Stage Balancing",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "create_clock",
+    "target_type": "Command",
+    "description": "Gate stage balancing requires clocks to be defined by create_clock for each clock network where clock gates are reconfigured."
+  },
+  {
+    "source": "Gate Stage Balancing",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Tool-inserted Clock Gates",
+    "target_type": "Feature",
+    "description": "Gate stage balancing considers tool-inserted clock gates during balancing."
+  },
+  {
+    "source": "Gate Stage Balancing",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Integrated Clock Gating Cells",
+    "target_type": "Feature",
+    "description": "Gate stage balancing considers integrated clock gating cells during balancing."
+  },
+  {
+    "source": "-gate_clock",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Gate Stage Balancing",
+    "target_type": "Feature",
+    "description": "When power_cg_balance_stages is true, using -gate_clock enables clock-gate stage reconfiguration and balancing."
+  },
+  {
+    "source": "insert_clock_gating",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "latch-free clock gating",
+    "target_type": "Feature",
+    "description": "The insert_clock_gating command performs latch-free clock gate insertion."
+  },
+  {
+    "source": "latch-free clock gating",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "setup condition",
+    "target_type": "Feature",
+    "description": "Latch-free clock gating requires the setup condition to be met before a bank can be clock gated."
+  },
+  {
+    "source": "setup condition",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "synchronous nets",
+    "target_type": "Feature",
+    "description": "The setup condition requires the bank enable condition to be combinationally dependent on nets that are synchronous with the bank registers."
+  },
+  {
+    "source": "power_cg_ignore_setup_condition",
+    "source_type": "Variable",
+    "relation": "DISABLES",
+    "target": "setup condition",
+    "target_type": "Feature",
+    "description": "Setting power_cg_ignore_setup_condition to true causes the setup condition to be ignored."
+  },
+  {
+    "source": "compile_retime_exception_registers",
+    "source_type": "Variable",
+    "relation": "ENABLES",
+    "target": "Adaptive Retiming",
+    "target_type": "Feature",
+    "description": "When set to true, compile_retime_exception_registers allows adaptive retiming to move registers with common path exceptions."
+  },
+  {
+    "source": "compile_retime_exception_registers",
+    "source_type": "Variable",
+    "relation": "DEPENDS_ON",
+    "target": "-retime",
+    "target_type": "Parameter",
+    "description": "The compile_retime_exception_registers variable only affects flows that use compile_ultra with the -retime option."
+  },
+  {
+    "source": "Adaptive Retiming",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Adaptive retiming can move exception registers to improve area when enabled by compile_retime_exception_registers."
+  },
+  {
+    "source": "set_optimize_registers",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "true",
+    "target_type": "Parameter",
+    "description": "The set_optimize_registers command accepts the true parameter to set the optimize_registers attribute."
+  },
+  {
+    "source": "set_optimize_registers",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "false",
+    "target_type": "Parameter",
+    "description": "The set_optimize_registers command accepts the false parameter to set the optimize_registers attribute."
+  },
+  {
+    "source": "set_optimize_registers",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-designs",
+    "target_type": "Parameter",
+    "description": "The set_optimize_registers command accepts the -designs parameter to specify the designs to retime."
+  },
+  {
+    "source": "set_optimize_registers",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Retiming",
+    "target_type": "Feature",
+    "description": "The set_optimize_registers command enables retiming by setting the optimize_registers attribute so compile automatically invokes optimize_registers."
+  },
+  {
+    "source": "set_optimize_registers",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Delay Threshold Optimization",
+    "target_type": "Feature",
+    "description": "The set_optimize_registers command can direct Design Compiler to optimize subcritical paths using delay threshold optimization."
+  },
+  {
+    "source": "Retiming",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Retiming moves registers across combinational logic to achieve a target clock period, improving timing."
+  },
+  {
+    "source": "Delay Threshold Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Delay threshold optimization targets subcritical paths to improve timing optimization beyond the worst critical delay provided by retiming."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-all_options",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -all_options parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-booth_encoding",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -booth_encoding parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-booth_radix8",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -booth_radix8 parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-booth_mux_based",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -booth_mux_based parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-booth_cell",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -booth_cell parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-mult_radix4",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -mult_radix4 parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-mult_nand_based",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -mult_nand_based parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-inv_out_adder_cell",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -inv_out_adder_cell parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-4to2_compressor_cell",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -4to2_compressor_cell parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-adder_radix",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -adder_radix parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-ling_adder",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -ling_adder parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-hybrid_adder",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -hybrid_adder parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-carry_select_adder_cell",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -carry_select_adder_cell parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-cond_sum_adder",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -cond_sum_adder parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-sklansky_adder",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -sklansky_adder parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-brent_kung_adder",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -brent_kung_adder parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-bounded_fanout_adder",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -bounded_fanout_adder parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-mux_based",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -mux_based parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-inv_adder_cell",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -inv_adder_cell parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-sop2pos_transformation",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -sop2pos_transformation parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-tp_opt_tree",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -tp_opt_tree parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-tp_oper_sel",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -tp_oper_sel parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-smart_compare",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -smart_compare parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-optimize_for",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -optimize_for parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-hierarchy",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command accepts the -hierarchy parameter."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Datapath Cell Generation Strategy Control",
+    "target_type": "Feature",
+    "description": "The set_dp_smartgen_options command controls strategies used for datapath cell generation for arithmetic and shift operators."
+  },
+  {
+    "source": "-optimize_for",
+    "source_type": "Parameter",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "The -optimize_for parameter can direct datapath generation to optimize for area."
+  },
+  {
+    "source": "-optimize_for",
+    "source_type": "Parameter",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "The -optimize_for parameter can direct datapath generation to optimize for speed, corresponding to timing improvement."
+  },
+  {
+    "source": "-booth_encoding",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Booth-encoding architectures",
+    "target_type": "Feature",
+    "description": "The -booth_encoding parameter enables Booth-encoding architectures for multiplier implementation when set to auto or true."
+  },
+  {
+    "source": "-booth_encoding",
+    "source_type": "Parameter",
+    "relation": "DISABLES",
+    "target": "Booth-encoding architectures",
+    "target_type": "Feature",
+    "description": "The -booth_encoding parameter disables Booth-encoding architectures for multiplier implementation when set to false."
+  },
+  {
+    "source": "-booth_encoding",
+    "source_type": "Parameter",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "When set to auto, the -booth_encoding parameter uses Booth encoding only if there is a QoR benefit."
+  },
+  {
+    "source": "-booth_radix8",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "radix-8 Booth-encoding architectures",
+    "target_type": "Feature",
+    "description": "The -booth_radix8 parameter enables radix-8 Booth-encoding architectures for multiplier implementation when set to auto or true."
+  },
+  {
+    "source": "-booth_radix8",
+    "source_type": "Parameter",
+    "relation": "DISABLES",
+    "target": "radix-8 Booth-encoding architectures",
+    "target_type": "Feature",
+    "description": "The -booth_radix8 parameter disables radix-8 Booth-encoding architectures for multiplier implementation when set to false."
+  },
+  {
+    "source": "-booth_radix8",
+    "source_type": "Parameter",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "When set to auto, the -booth_radix8 parameter uses radix-8 Booth encoding only if there is a QoR benefit."
+  },
+  {
+    "source": "-booth_radix8",
+    "source_type": "Parameter",
+    "relation": "DEPENDS_ON",
+    "target": "-booth_encoding",
+    "target_type": "Parameter",
+    "description": "The -booth_radix8 parameter is active only if -booth_encoding is set to auto or true."
+  },
+  {
+    "source": "-booth_mux_based",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "MUX-based Booth encoding",
+    "target_type": "Feature",
+    "description": "The -booth_mux_based parameter controls use of MUX-based Booth encoding."
+  },
+  {
+    "source": "MUX-based Booth encoding",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "MUX-based Booth encoding can improve QoR for technologies with fast multiplexer cells."
+  },
+  {
+    "source": "-booth_cell",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "special Booth multiplier cells",
+    "target_type": "Feature",
+    "description": "The -booth_cell parameter controls use of special Booth multiplier cells from the target library during compilation."
+  },
+  {
+    "source": "special Booth multiplier cells",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "Using special Booth multiplier cells is applied when the tool determines there is a QoR benefit."
+  },
+  {
+    "source": "-mult_radix4",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "radix-4 non-Booth multiplier architecture",
+    "target_type": "Feature",
+    "description": "The -mult_radix4 parameter controls the use of radix-4 non-Booth architectures to implement multipliers."
+  },
+  {
+    "source": "-mult_radix4",
+    "source_type": "Parameter",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "When set to auto, -mult_radix4 is used only if the tool determines there is a QoR benefit."
+  },
+  {
+    "source": "-mult_radix4",
+    "source_type": "Parameter",
+    "relation": "CONFLICTS_WITH",
+    "target": "-booth_encoding",
+    "target_type": "Parameter",
+    "description": "The -mult_radix4 parameter cannot be used when -booth_encoding is set to true."
+  },
+  {
+    "source": "radix-4 non-Booth multiplier architecture",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "DesignWare minPower flow",
+    "target_type": "Feature",
+    "description": "The radix-4 non-Booth multiplier architecture option is available only in the DesignWare minPower flow."
+  },
+  {
+    "source": "-mult_nand_based",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "NAND-based Multiplier Structures",
+    "target_type": "Feature",
+    "description": "The -mult_nand_based parameter controls the use of NAND-based multiplier structures in multipliers."
+  },
+  {
+    "source": "NAND-based Multiplier Structures",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Dynamic Power",
+    "target_type": "Metric",
+    "description": "Using NAND-based multiplier structures can result in lower dynamic power."
+  },
+  {
+    "source": "NAND-based Multiplier Structures",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "minPower flow",
+    "target_type": "Feature",
+    "description": "When -mult_nand_based is set to auto, the tool uses NAND-based multiplier structures only when the minPower flow is enabled."
+  },
+  {
+    "source": "NAND-based Multiplier Structures",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "When -mult_nand_based is set to auto, the tool uses NAND-based multiplier structures only if it determines there is a QoR benefit."
+  },
+  {
+    "source": "NAND-based Multiplier Structures",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Booth encoding",
+    "target_type": "Feature",
+    "description": "The -mult_nand_based option has no effect when Booth encoding is used in multipliers."
+  },
+  {
+    "source": "-inv_out_adder_cell",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Inverted Sum-and-Carry Output Full-Adder Cell Usage",
+    "target_type": "Feature",
+    "description": "The -inv_out_adder_cell parameter controls usage of full-adder cells with inverted sum-and-carry outputs during compilation."
+  },
+  {
+    "source": "Inverted Sum-and-Carry Output Full-Adder Cell Usage",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "Using full-adder cells with inverted sum-and-carry outputs can be applied when the tool determines there is a QoR benefit."
+  },
+  {
+    "source": "-4to2_compressor_cell",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "4-2 Compressor Cell Usage",
+    "target_type": "Feature",
+    "description": "The -4to2_compressor_cell parameter controls usage of 4-2 compressor cells during compilation."
+  },
+  {
+    "source": "4-2 Compressor Cell Usage",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "Using 4-2 compressor cells can be applied when the tool determines there is a QoR benefit."
+  },
+  {
+    "source": "-adder_radix",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Prefix Structure Radix Control",
+    "target_type": "Feature",
+    "description": "The -adder_radix parameter controls the radix selection of the parallel-prefix structure used in adders."
+  },
+  {
+    "source": "Prefix Structure Radix Control",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "Automatic radix selection is driven by achieving the best QoR."
+  },
+  {
+    "source": "-adder_radix",
+    "source_type": "Parameter",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "Using the -adder_radix parameter with auto or suitable radix values can deliver better QoR."
+  },
+  {
+    "source": "-ling_adder",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Ling Adder Architecture",
+    "target_type": "Feature",
+    "description": "The -ling_adder parameter controls whether Ling adder architectures are used."
+  },
+  {
+    "source": "-ling_adder",
+    "source_type": "Parameter",
+    "relation": "DEPENDS_ON",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "When set to auto, the -ling_adder parameter is applied only if the tool determines there is a QoR benefit."
+  },
+  {
+    "source": "-ling_adder",
+    "source_type": "Parameter",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "Enabling Ling adder architectures can be chosen when the tool detects a QoR benefit."
+  },
+  {
+    "source": "-hybrid_adder",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Hybrid Adder Architecture",
+    "target_type": "Feature",
+    "description": "The -hybrid_adder parameter controls the usage of hybrid parallel-prefix or carry-select adder architectures."
+  },
+  {
+    "source": "Hybrid Adder Architecture",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "Hybrid adder architecture is used when the tool determines there is a QoR benefit."
+  },
+  {
+    "source": "-carry_select_adder_cell",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Carry-Select Adder Cell Usage",
+    "target_type": "Feature",
+    "description": "The -carry_select_adder_cell parameter controls the usage of carry-select adder cells in the target library for compilation."
+  },
+  {
+    "source": "Carry-Select Adder Cell Usage",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "Carry-select adder cell usage in auto mode depends on whether the tool determines there is a QoR benefit."
+  },
+  {
+    "source": "Carry-Select Adder Cell Usage",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "Carry-select adder cells are used when the tool determines there is a QoR benefit."
+  },
+  {
+    "source": "-cond_sum_adder",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Conditional-Sum Adder Architecture",
+    "target_type": "Feature",
+    "description": "The -cond_sum_adder parameter controls the use of conditional-sum adder architectures."
+  },
+  {
+    "source": "-sklansky_adder",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Sklansky Parallel-Prefix Adder Architecture",
+    "target_type": "Feature",
+    "description": "The -sklansky_adder parameter controls the use of Sklansky parallel-prefix adder architectures."
+  },
+  {
+    "source": "Sklansky Parallel-Prefix Adder Architecture",
+    "source_type": "Feature",
+    "relation": "DEGRADES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "The Sklansky parallel-prefix adder architecture usually results in QoR degradation."
+  },
+  {
+    "source": "-brent_kung_adder",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Brent-Kung parallel-prefix adder architectures",
+    "target_type": "Feature",
+    "description": "The -brent_kung_adder parameter controls whether Brent-Kung parallel-prefix adder architectures are used."
+  },
+  {
+    "source": "Brent-Kung parallel-prefix adder architectures",
+    "source_type": "Feature",
+    "relation": "DEGRADES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "Brent-Kung parallel-prefix adder architectures usually degrade QoR."
+  },
+  {
+    "source": "-bounded_fanout_adder",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "bounded fanout adder architectures",
+    "target_type": "Feature",
+    "description": "The -bounded_fanout_adder parameter controls whether bounded fanout adder architectures are used."
+  },
+  {
+    "source": "bounded fanout adder architectures",
+    "source_type": "Feature",
+    "relation": "INCLUDES",
+    "target": "Kogge-Stone parallel-prefix architectures",
+    "target_type": "Feature",
+    "description": "Bounded fanout adder architectures correspond to Kogge-Stone parallel-prefix architectures."
+  },
+  {
+    "source": "-mux_based",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "MUX-based architectures",
+    "target_type": "Feature",
+    "description": "The -mux_based parameter enables the use of MUX-based architectures by datapath generators when set to auto or true."
+  },
+  {
+    "source": "-mux_based",
+    "source_type": "Parameter",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "When set to auto, the -mux_based parameter is used only if the tool determines there is a QoR benefit."
+  },
+  {
+    "source": "-inv_adder_cell",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Inverted carry full adder cells",
+    "target_type": "Feature",
+    "description": "The -inv_adder_cell parameter enables the use of full adder cells with inverted carry-in or carry-out in the target library when set to auto or true."
+  },
+  {
+    "source": "-inv_adder_cell",
+    "source_type": "Parameter",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "When set to auto, the -inv_adder_cell parameter is used only if the tool determines there is a QoR benefit."
+  },
+  {
+    "source": "-sop2pos_transformation",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "SOP to POS Transformation",
+    "target_type": "Feature",
+    "description": "The -sop2pos_transformation parameter enables SOP to POS transformation in datapath blocks when set to true or auto."
+  },
+  {
+    "source": "-sop2pos_transformation",
+    "source_type": "Parameter",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "The -sop2pos_transformation parameter can improve design area through SOP to POS optimization."
+  },
+  {
+    "source": "-sop2pos_transformation",
+    "source_type": "Parameter",
+    "relation": "DEGRADES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "The -sop2pos_transformation parameter can degrade delay, indicating a timing cost."
+  },
+  {
+    "source": "SOP to POS Transformation",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "SOP to POS transformation can improve design area in datapath blocks."
+  },
+  {
+    "source": "SOP to POS Transformation",
+    "source_type": "Feature",
+    "relation": "DEGRADES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "SOP to POS transformation can come at the cost of delay, degrading timing."
+  },
+  {
+    "source": "SOP to POS Transformation",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "When -sop2pos_transformation is set to auto, use of SOP to POS transformation depends on whether the tool determines a QoR benefit."
+  },
+  {
+    "source": "-tp_opt_tree",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Transition-Probability-Based Carry-Save Adder Tree Optimization",
+    "target_type": "Feature",
+    "description": "The -tp_opt_tree parameter enables carry-save adder tree optimization for low-power optimization based on transition probabilities."
+  },
+  {
+    "source": "-tp_opt_tree",
+    "source_type": "Parameter",
+    "relation": "IMPROVES",
+    "target": "Dynamic Power",
+    "target_type": "Metric",
+    "description": "The -tp_opt_tree parameter reduces internal switching activity and improves dynamic power in SOP implementations when input transition probabilities are non-uniform."
+  },
+  {
+    "source": "Transition-Probability-Based Carry-Save Adder Tree Optimization",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Dynamic Power",
+    "target_type": "Metric",
+    "description": "Transition-probability-based carry-save adder tree optimization reduces internal switching activity and improves dynamic power."
+  },
+  {
+    "source": "Transition-Probability-Based Carry-Save Adder Tree Optimization",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Dynamic Power",
+    "target_type": "Metric",
+    "description": "The optimization is applied when dynamic power is being optimized."
+  },
+  {
+    "source": "-tp_oper_sel",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Transition-Probability-Based Multiplier Operand Selection",
+    "target_type": "Feature",
+    "description": "The -tp_oper_sel parameter controls transition-probability-based selection or ordering of multiplier input operands for low power."
+  },
+  {
+    "source": "Transition-Probability-Based Multiplier Operand Selection",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Dynamic Power",
+    "target_type": "Metric",
+    "description": "Transition-probability-based multiplier operand selection can reduce internal switching activity and thereby improve dynamic power."
+  },
+  {
+    "source": "Transition-Probability-Based Multiplier Operand Selection",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "When -tp_oper_sel is set to auto, the feature is used only if the tool determines a QoR benefit."
+  },
+  {
+    "source": "Transition-Probability-Based Multiplier Operand Selection",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Dynamic Power",
+    "target_type": "Metric",
+    "description": "The feature is applied when dynamic power is being optimized."
+  },
+  {
+    "source": "Transition-Probability-Based Multiplier Operand Selection",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Booth Encoding",
+    "target_type": "Feature",
+    "description": "The option affects only multipliers that use booth encoding."
+  },
+  {
+    "source": "-smart_compare",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Smart Comparator Input Ordering",
+    "target_type": "Feature",
+    "description": "The -smart_compare option enables smart ordering of comparator inputs."
+  },
+  {
+    "source": "Smart Comparator Input Ordering",
+    "source_type": "Feature",
+    "relation": "IMPROVES",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Smart comparator input ordering improves timing by eliminating an output inverter and shortening the critical path when beneficial."
+  },
+  {
+    "source": "-smart_compare",
+    "source_type": "Parameter",
+    "relation": "DEPENDS_ON",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "When set to auto or true, -smart_compare is applied only if the tool determines a QoR benefit."
+  },
+  {
+    "source": "-smart_compare false",
+    "source_type": "Parameter",
+    "relation": "DISABLES",
+    "target": "Smart Comparator Input Ordering",
+    "target_type": "Feature",
+    "description": "Setting -smart_compare to false disables smart comparator input ordering."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "ENABLES",
+    "target": "Datapath Synthesis Smart Generation",
+    "target_type": "Feature",
+    "description": "The set_dp_smartgen_options command controls smart generation strategies used in datapath synthesis."
+  },
+  {
+    "source": "Datapath Synthesis Smart Generation",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "Smart generation strategies are automatically chosen based on the given design constraints, including timing-related goals."
+  },
+  {
+    "source": "Datapath Synthesis Smart Generation",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "Smart generation strategies are automatically chosen based on the given design constraints, including area-related goals."
+  },
+  {
+    "source": "-optimize_for",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "DP_OP option inheritance",
+    "target_type": "Feature",
+    "description": "The -optimize_for option is inherited to a DP_OP cell when a synthetic operator is extracted into the DP_OP cell."
+  },
+  {
+    "source": "-mult_arch",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Multiplier architecture control",
+    "target_type": "Feature",
+    "description": "The -mult_arch option is inherited to a DP_OP cell and controls multiplier architecture settings."
+  },
+  {
+    "source": "-booth_encoding",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Multiplier architecture control",
+    "target_type": "Feature",
+    "description": "The -booth_encoding option is inherited to a DP_OP cell and controls multiplier architecture settings."
+  },
+  {
+    "source": "-booth_radix8",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Multiplier architecture control",
+    "target_type": "Feature",
+    "description": "The -booth_radix8 option is inherited to a DP_OP cell and controls multiplier architecture settings."
+  },
+  {
+    "source": "-booth_mux_based",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Multiplier architecture control",
+    "target_type": "Feature",
+    "description": "The -booth_mux_based option is inherited to a DP_OP cell and controls multiplier architecture settings."
+  },
+  {
+    "source": "-booh_cell",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Multiplier architecture control",
+    "target_type": "Feature",
+    "description": "The -booh_cell option is inherited to a DP_OP cell and controls multiplier architecture settings."
+  },
+  {
+    "source": "-mult_radix4",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Multiplier architecture control",
+    "target_type": "Feature",
+    "description": "The -mult_radix4 option is inherited to a DP_OP cell and controls multiplier architecture settings."
+  },
+  {
+    "source": "-mult_nand_based",
+    "source_type": "Parameter",
+    "relation": "ENABLES",
+    "target": "Multiplier architecture control",
+    "target_type": "Feature",
+    "description": "The -mult_nand_based option is inherited to a DP_OP cell and controls multiplier architecture settings."
+  },
+  {
+    "source": "DP_OP option inheritance",
+    "source_type": "Feature",
+    "relation": "DEPENDS_ON",
+    "target": "DP_OP extraction",
+    "target_type": "Feature",
+    "description": "Option inheritance to a DP_OP cell occurs when a synthetic operator is extracted into a DP_OP cell."
+  },
+  {
+    "source": "compile_ultra",
+    "source_type": "Command",
+    "relation": "DEPENDS_ON",
+    "target": "Synthetic Operator Transformations",
+    "target_type": "Feature",
+    "description": "During compile_ultra, synthetic operators can undergo multiple complex transformations such as sharing and unsharing."
+  },
+  {
+    "source": "set_dp_smartgen_options",
+    "source_type": "Command",
+    "relation": "HAS_PARAMETER",
+    "target": "-power_effort",
+    "target_type": "Parameter",
+    "description": "The set_dp_smartgen_options command can be used to set the -power_effort option."
+  },
+  {
+    "source": "-optimize_for",
+    "source_type": "Parameter",
+    "relation": "CONFLICTS_WITH",
+    "target": "Single-command smart generation option setting",
+    "target_type": "Command",
+    "description": "The -optimize_for option is an exception to the rule that multiple smart generation options on the same object must be set by a single command."
+  },
+  {
+    "source": "-power_effort",
+    "source_type": "Parameter",
+    "relation": "CONFLICTS_WITH",
+    "target": "Single-command smart generation option setting",
+    "target_type": "Command",
+    "description": "The -power_effort option is an exception to the rule that multiple smart generation options on the same object must be set by a single command."
+  },
+  {
+    "source": "optimize_netlist",
+    "source_type": "Command",
+    "relation": "IMPROVES",
+    "target": "QoR",
+    "target_type": "Metric",
+    "description": "The optimize_netlist command performs high-effort optimization for better QoR."
+  },
+  {
+    "source": "-area",
+    "source_type": "Parameter",
+    "relation": "IMPROVES",
+    "target": "Area",
+    "target_type": "Metric",
+    "description": "The -area parameter performs optimization to improve area."
+  },
+  {
+    "source": "-area",
+    "source_type": "Parameter",
+    "relation": "DEPENDS_ON",
+    "target": "Timing",
+    "target_type": "Metric",
+    "description": "The -area optimization is performed without degrading timing."
+  },
+  {
+    "source": "-area",
+    "source_type": "Parameter",
+    "relation": "DEPENDS_ON",
+    "target": "Leakage Power",
+    "target_type": "Metric",
+    "description": "The -area optimization is performed without degrading leakage power."
+  }
+]

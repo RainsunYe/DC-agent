@@ -1,0 +1,4 @@
+# Minimal Design Compiler setup for the bundled Nangate45 library.
+set search_path [list $env(DC_AGENT_DC_LIB_DIR)]
+set target_library "stdcells.db"
+set link_library "* stdcells.db"

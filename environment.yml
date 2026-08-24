@@ -1,0 +1,10 @@
+name: dc-agent
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.20
+  - pip
+  - yosys=0.54
+  - iverilog=13.0
+  - pip:
+      - -r requirements.txt
