@@ -4,7 +4,7 @@
 
 - 64-bit Linux
 - Conda or Miniconda
-- A licensed Synopsys Design Compiler installation with dc_shell on PATH
+- A licensed Synopsys Design Compiler installation with dc_shell on PATH. Synopsys Design Compiler 2018 or later is recommended.
 - Network access to an OpenAI-compatible streaming chat-completions endpoint
 
 ## Files
